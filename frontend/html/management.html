@@ -2,324 +2,357 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestão</title>
-    <link rel="stylesheet" href="../css/basic.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/wpp-contact.css">
-    <link rel="stylesheet" href="../css/manegement.css">
-    <link rel="icon" href="../images/projeto_esperanca_logo.svg">
-    <script src="../js/header_mobile.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestão - Projeto Esperança</title>
+    <link rel="icon" href="../images/projeto_esperanca_logo.svg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#F47701',
+                        primaryDark: '#d36702',
+                        secondary: '#0AA550',
+                        dark: '#161618',
+                        light: '#F9F9FF',
+                    },
+                    fontFamily: {
+                        sans: ['DM Sans', 'sans-serif'],
+                        display: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
 
-    <!-- Cabeçalho -->
-    <section class="header">
-        <div class="header-logo"> <!--logo-->
-            <a href ="../../index.html" target="_blank"><img src="../images/projeto_esperanca_logo.svg" alt=""></a>
-            <div class="header-logo-text">
-                <h3>Projeto Esperança</h3>
-                <p>Pe. Guildo Tonelotto</p>
-            </div>
-            <a href="#" class="icone_menu">
-                <div id="icm" class="header-button">
-                    ☰
+    <!-- CABEÇALHO -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 h-20 flex justify-between items-center">
+            <a href="../../index.html" class="flex items-center gap-3 group">
+                <img src="../images/projeto_esperanca_logo.svg" alt="Logo"
+                    class="h-12 w-auto transition-transform group-hover:scale-105" />
+                <div class="hidden md:flex flex-col">
+                    <h1 class="text-secondary font-display font-bold text-lg leading-tight uppercase">Projeto Esperança
+                    </h1>
+                    <p class="text-dark text-xs font-medium">Pe. Guido Tonelotto</p>
                 </div>
             </a>
-        </div>
 
-        <div class="header-button-group"> <!-- botões -->
-            <a href="../../index.html">
-                <div class="header-button">Home</div>
-            </a>
-            <a href="../html/projects.html">
-                <div class="header-button">Projetos</div>
-            </a>
-            <a href="#">
-                <div class="header-button">Gestão</div>
-            </a>
-            <a href="../html/stories.html">
-                <div class="header-button">Histórias</div>
-            </a>
-            <a href="../html/pr.guido-history.html">
-                <div class="header-button">Sobre Pe.Guido</div>
-            </a>
-            <a href="../html/donate.html">
-                <div class="header-button donate-button">Doe Agora</div>
-            </a>
-        </div>
-    </section>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="../../index.html" class="text-dark hover:text-primary font-bold transition-colors">Home</a>
+                <a href="./projects.html" class="text-dark hover:text-primary font-bold transition-colors">Projetos</a>
+                <a href="./management.html" class="text-primary font-bold transition-colors">Gestão</a>
+                <a href="./stories.html" class="text-dark hover:text-primary font-bold transition-colors">Histórias</a>
+                <a href="./pr.guido-history.html" class="text-dark hover:text-primary font-bold transition-colors">Sobre
+                    Pe. Guido</a>
+                <a href="./donate.html"
+                    class="bg-primary hover:bg-primaryDark text-white px-6 py-2 rounded-full font-bold shadow-lg transition-transform hover:-translate-y-0.5">Doe
+                    Agora</a>
+            </nav>
 
-    <!-- Carrosel  -->
-    <section class="img-inicio-gestao">
-        <div> <!--background da div é a imagem-->
-            <h3>
-                Conheça aqui quem<br> faz parte da Gestão
-            </h3>
+            <button id="mobile-menu-btn" class="md:hidden text-dark focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
         </div>
-    </section>
-
-    <!-- Gestão -->
-    <section class="gestao-page">
-        <div class="coordenacao">
-            <h3>Coordenação do Projeto Esperança</h3>
-            <div class="conselho-card-row">
-                <div class="gestao-card">
-                    <img src="../images/Gestão/Coordenadora - Lígia Maria.jpeg" alt="Coordenaçã">
-                    <div class="name-and-function">
-                        <h3>Lígia Maria Bandeira Guerra</h3>
-                        <p>Coordenação Geral</p>
-                    </div>
-                </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
+            <div class="flex flex-col p-4 space-y-4 font-semibold text-center">
+                <a href="../../index.html" class="text-dark hover:text-primary">Home</a>
+                <a href="./projects.html" class="text-dark hover:text-primary">Projetos</a>
+                <a href="./management.html" class="text-primary">Gestão</a>
+                <a href="./stories.html" class="text-dark hover:text-primary">Histórias</a>
+                <a href="./pr.guido-history.html" class="text-dark hover:text-primary">Sobre Pe. Guido</a>
+                <a href="./donate.html" class="bg-primary text-white py-3 rounded-xl mx-4">Doe Agora</a>
             </div>
         </div>
+    </header>
 
-        <div class="gestao">
-            <h3>Gestão Atual - 2024</h3>
-            <div class="conselho-card-row">
-                <div class="gestao-card">
-                    <img src="" alt="">
-                    <div class="name-and-function">
-                        <h3>Dom Marinano</h3>
-                        <p>Bispo da Diocese</p>
-                    </div>
-                </div>
-                <div class="gestao-card">
-                    <img src="" alt="">
-                    <div class="name-and-function">
-                        <h3>Pe.José Ribeiro</h3>
-                        <p>Administrador Paroquial de São José</p>
-                    </div>
-                </div>
+    <main class="flex-grow">
+
+        <!-- Hero Section -->
+        <section class="relative h-[400px] flex items-center justify-center bg-cover bg-center bg-fixed"
+            style="background-image: url('../images/imagem_inicio.png');">
+            <div class="absolute inset-0 bg-black/60"></div>
+            <div class="relative z-10 text-center px-4">
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-4">
+                    Quem faz parte<br><span class="text-primary">da nossa Gestão</span>
+                </h2>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto">Conheça a equipe dedicada que mantém vivo o legado do
+                    Projeto Esperança.</p>
             </div>
-        </div>
+        </section>
 
-        <div class="conselho">
-            <h3>
-                Conselho do Projeto Esperança (Triênio 2022-2025)
-            </h3>
-            <div class="conselho-card-group">
-                <div class="conselho-card-row">
-                    <div class="gestao-card">
-                        <img src="../images/Gestão/Presidente - Pe. Francisco Crisanto.jpeg" alt="Presidente">
-                        <div class="name-and-function">
-                            <h3>Pe. Francisco Crisanto</h3>
-                            <p>Presidente</p> 
+        <div class="container mx-auto px-4 py-16 space-y-20">
+
+            <!-- Coordenação -->
+            <section>
+                <div class="flex items-center gap-4 mb-10">
+                    <div class="h-10 w-2 bg-primary rounded-full"></div>
+                    <h3 class="text-3xl font-display font-bold text-dark">Coordenação Geral</h3>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
+                        <div class="h-64 overflow-hidden relative bg-gray-200">
+                            <img src="../images/Gestão/1ª Secretária.jpeg"
+                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                                alt="1ª Secretária">
                         </div>
-                    </div>
-                    <div class="gestao-card">
-                        <img src="" alt="Tesoureiro">
-                        <div class="name-and-function">
-                            <h3>Pe. José Alves Paiva Júnior</h3>
-                            <p>Vice Presidente</p>
-                        </div>
-                    </div>
-                    <div class="gestao-card">
-                        <img src="../images/Gestão/1ª Secretária - Lígia Maria.jpeg" alt="1ª secretária">
-                        <div class="name-and-function">
-                            <h3>Lígia Maria Bandeira Guerra</h3>
-                            <p>1ª Secretária</p>
+                        <div class="p-5 border-b-4 border-primary">
+                            <h4 class="font-bold text-lg text-dark leading-tight">Lígia Maria B. Guerra</h4>
+                            <p class="text-primary font-bold text-sm uppercase mt-1">Coordenadora Geral</p>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <div class="conselho-card-row">
-                    <div class="gestao-card">
-                        <img src="../images/Gestão/2ª Secretária - Maria das dores.jpeg" alt="2ª secretária">
-                        <div class="name-and-function">
-                            <h3>Maria das Dores Soares</h3>
-                            <p>2ª Secretária</p>
-                        </div>
+            <!-- Gestão Eclesiástica -->
+            <div class="flex items-center gap-4 mb-10">
+                <div class="h-10 w-2 bg-primary rounded-full"></div>
+                <h3 class="text-3xl font-display font-bold text-dark">Gestão Eclesiástica - 2024</h3>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
+                    <div class="h-64 overflow-hidden relative bg-gray-100 flex items-center justify-center">
+                        <!-- Placeholder Image SVG -->
+                        <svg class="w-20 h-20 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                        </svg>
                     </div>
-                    <div class="gestao-card">
-                        <img src="../images/Gestão/Tesoureiro - Raimundo Ewerthon.jpeg" alt="tesoureiro">
-                        <div class="name-and-function">
-                            <h3>Raimundo Ewerthon Filgueira da Costa</h3>
-                            <p>Tesoureiro</p>
-                        </div>
-                    </div>
-                    <div class="gestao-card">
-                        <img src="../images/Gestão/Fiscal titular - Francisco Sérgio.jpeg" alt="Fiscal titular">
-                        <div class="name-and-function">
-                            <h3>Francisco Sérgio de Souza Melo</h3>
-                            <p>Fiscal Titular</p>
-                        </div>
+                    <div class="p-5 border-b-4 border-primary">
+                        <h4 class="font-bold text-lg text-dark leading-tight">Dom Mariano</h4>
+                        <p class="text-primary font-bold text-sm uppercase mt-1">Bispo da Diocese</p>
                     </div>
                 </div>
 
-                <div class="conselho-card-row">
-                    <div class="gestao-card">
-                        <img src="../images/Gestão/Fiscal titular - Francisco das Chagas.jpeg" alt="Fiscal titular">
-                        <div class="name-and-function">
-                            <h3>Francisco das Chagas da Silva</h3>
-                            <p>Fiscal Titular</p>
-                        </div>
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
+                    <div class="h-64 overflow-hidden relative bg-gray-100 flex items-center justify-center">
+                        <!-- Placeholder Image SVG -->
+                        <svg class="w-20 h-20 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                        </svg>
                     </div>
-                    <div class="gestao-card">
-                        <img src="../images/Gestão/Fiscal suplente - Abner Silva.jpeg" alt="Fiscal suplente">
-                        <div class="name-and-function">
-                            <h3>Abner Silva de Souza</h3>
-                            <p>Fiscal Suplente</p>
-                        </div>
-                    </div>
-                    <div class="gestao-card">
-                        <img src="../images/Gestão/Fiscal suplente - Julia Maria.jpeg" alt="Fiscal suplente">
-                        <div class="name-and-function">
-                            <h3>Júlia Maria Mendes de Oliveira</h3>
-                            <p>Fiscal Suplente</p>
-                        </div>
+                    <div class="p-5 border-b-4 border-primary">
+                        <h4 class="font-bold text-lg text-dark leading-tight">Pe. José Ribeiro</h4>
+                        <p class="text-primary font-bold text-sm uppercase mt-1">Administrador Paroquial de São José</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+            </section>
 
-    <section class="estatuto-btn">
-        <hr>
-        <div>
-            <a href="../media/Estatuto do Lar do Padre Guido.pdf" target="_blank">
-                <button>
-                    <svg width="5vw" height="5vw" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <title>Link-Externo-Icone</title>
-                        <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g id="File" transform="translate(-480.000000, -192.000000)" fill-rule="nonzero">
-                                <g id="external_link_line" transform="translate(480.000000, 192.000000)">
-                                    <path
-                                        d="M24,0 L24,24 L0,24 L0,0 L24,0 Z M12.5934901,23.257841 L12.5819402,23.2595131 L12.5108777,23.2950439 L12.4918791,23.2987469 L12.4918791,23.2987469 L12.4767152,23.2950439 L12.4056548,23.2595131 C12.3958229,23.2563662 12.3870493,23.2590235 12.3821421,23.2649074 L12.3780323,23.275831 L12.360941,23.7031097 L12.3658947,23.7234994 L12.3769048,23.7357139 L12.4804777,23.8096931 L12.4953491,23.8136134 L12.4953491,23.8136134 L12.5071152,23.8096931 L12.6106902,23.7357139 L12.6232938,23.7196733 L12.6232938,23.7196733 L12.6266527,23.7031097 L12.609561,23.275831 C12.6075724,23.2657013 12.6010112,23.2592993 12.5934901,23.257841 L12.5934901,23.257841 Z M12.8583906,23.1452862 L12.8445485,23.1473072 L12.6598443,23.2396597 L12.6498822,23.2499052 L12.6498822,23.2499052 L12.6471943,23.2611114 L12.6650943,23.6906389 L12.6699349,23.7034178 L12.6699349,23.7034178 L12.678386,23.7104931 L12.8793402,23.8032389 C12.8914285,23.8068999 12.9022333,23.8029875 12.9078286,23.7952264 L12.9118235,23.7811639 L12.8776777,23.1665331 C12.8752882,23.1545897 12.8674102,23.1470016 12.8583906,23.1452862 L12.8583906,23.1452862 Z M12.1430473,23.1473072 C12.1332178,23.1423925 12.1221763,23.1452606 12.1156365,23.1525954 L12.1099173,23.1665331 L12.0757714,23.7811639 C12.0751323,23.7926639 12.0828099,23.8018602 12.0926481,23.8045676 L12.108256,23.8032389 L12.3092106,23.7104931 L12.3186497,23.7024347 L12.3186497,23.7024347 L12.3225043,23.6906389 L12.340401,23.2611114 L12.337245,23.2485176 L12.337245,23.2485176 L12.3277531,23.2396597 L12.1430473,23.1473072 Z"
-                                        id="MingCute" fill-rule="nonzero">
-
-                                    </path>
-                                    <path
-                                        d="M11,6 C11.5523,6 12,6.44772 12,7 C12,7.55228 11.5523,8 11,8 L5,8 L5,19 L16,19 L16,13 C16,12.4477 16.4477,12 17,12 C17.5523,12 18,12.4477 18,13 L18,19 C18,20.1046 17.1046,21 16,21 L5,21 C3.89543,21 3,20.1046 3,19 L3,8 C3,6.89543 3.89543,6 5,6 L11,6 Z M20,3 C20.5523,3 21,3.44772 21,4 L21,4 L21,9 C21,9.55228 20.5523,10 20,10 C19.4477,10 19,9.55228 19,9 L19,9 L19,6.41421 L10.7071,14.7071 C10.3166,15.0976 9.68342,15.0976 9.29289,14.7071 C8.90237,14.3166 8.90237,13.6834 9.29289,13.2929 L9.29289,13.2929 L17.5858,5 L15,5 C14.4477,5 14,4.55229 14,4 C14,3.44772 14.4477,3 15,3 L15,3 Z"
-                                        id="形状结合" fill="#09244B">
-                                    </path>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                    Acessar Estatuto
-                </button>
-            </a>
-        </div>
-    </section>
-
-    <!-- Whatsapp -->
-    <section class="wpp-contact">
-        <div class="wpp-contact-main-div">
-            <div class="wpp-contact-main-div-text">
-                <h3>Precisa de mais informação?</h3>
-                <p>Escreva para nós e responderemos o mais breve possível</p>
-            </div>
-            <a href="https://api.whatsapp.com/send?phone=5584981868964" target="_blank">
-                <div class="wpp-contact-main-div-button">
-                    Whatsapp
+            <!-- Conselho -->
+            <section>
+                <div class="flex items-center gap-4 mb-10">
+                    <div class="h-10 w-2 bg-primary rounded-full"></div>
+                    <h3 class="text-3xl font-display font-bold text-dark">Conselho (Triênio 2022-2025)</h3>
                 </div>
-            </a>
-        </div>
-    </section>
 
-    <!-- Rodapé -->
-    <section class="footer">
-        <!--Parte de cima do rodapé -->
-        <div class="footer-top">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
 
-            <!--Informações e chamada para doação -->
-            <div class="footer-donate">
-                <div class="footer-logo"> <!--logo-->
-                    <img src="../images/projeto_esperanca_logo.svg" alt="">
-                    <div class="footer-logo-text">
-                        <h3>Projeto Esperança</h3>
-                        <p>Pe. Guildo Tonelotto</p>
+                    <!-- Card Membro 1 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
+                        <div class="h-64 overflow-hidden relative bg-gray-200">
+                            <img src="../images/Gestão/Presidente.jpeg"
+                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                                alt="Presidente">
+                        </div>
+                        <div class="p-5 border-b-4 border-primary">
+                            <h4 class="font-bold text-lg text-dark leading-tight">Pe. Francisco Crisanto</h4>
+                            <p class="text-primary font-bold text-sm uppercase mt-1">Presidente</p>
+                        </div>
                     </div>
-                </div>
-                <p>Ajude o Projeto Esperança a continuar<br>
-                    transformando vidas. Com sua doação, podemos<br>
-                    alcançar mais pessoas e levar esperança a quem<br>
-                    mais precisa.</p>
 
-                <a href="../html/donate.html">
-                    <div class="footer-button">Doe agora</div>
+                    <!-- Card Membro 2 (Placeholder para Vice) -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
+                        <div class="h-64 overflow-hidden relative bg-gray-100 flex items-center justify-center">
+                            <svg class="w-20 h-20 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                            </svg>
+                        </div>
+                        <div class="p-5 border-b-4 border-secondary">
+                            <h4 class="font-bold text-lg text-dark leading-tight">Pe. José Alves Paiva Jr.</h4>
+                            <p class="text-secondary font-bold text-sm uppercase mt-1">Vice Presidente</p>
+                        </div>
+                    </div>
+
+                    <!-- Card Membro 3 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
+                        <div class="h-64 overflow-hidden relative bg-gray-200">
+                            <img src="../images/Gestão/1ª Secretária.jpeg"
+                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                                alt="1ª Secretária">
+                        </div>
+                        <div class="p-5 border-b-4 border-primary">
+                            <h4 class="font-bold text-lg text-dark leading-tight">Lígia Maria B. Guerra</h4>
+                            <p class="text-primary font-bold text-sm uppercase mt-1">1ª Secretária</p>
+                        </div>
+                    </div>
+
+                    <!-- Card Membro 4 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
+                        <div class="h-64 overflow-hidden relative bg-gray-200">
+                            <img src="../images/Gestão/2ª Secretária.jpeg"
+                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                                alt="2ª Secretária">
+                        </div>
+                        <div class="p-5 border-b-4 border-secondary">
+                            <h4 class="font-bold text-lg text-dark leading-tight">Maria das Dores Soares</h4>
+                            <p class="text-secondary font-bold text-sm uppercase mt-1">2ª Secretária</p>
+                        </div>
+                    </div>
+
+                    <!-- Card Membro 5 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
+                        <div class="h-64 overflow-hidden relative bg-gray-200">
+                            <img src="../images/Gestão/Tesoureiro.jpeg"
+                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                                alt="Tesoureiro">
+                        </div>
+                        <div class="p-5 border-b-4 border-primary">
+                            <h4 class="font-bold text-lg text-dark leading-tight">Raimundo Ewerthon</h4>
+                            <p class="text-primary font-bold text-sm uppercase mt-1">Tesoureiro</p>
+                        </div>
+                    </div>
+
+                    <!-- Card Membro 6 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
+                        <div class="h-64 overflow-hidden relative bg-gray-200">
+                            <img src="../images/Gestão/Fiscal titular.jpeg"
+                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                                alt="Fiscal">
+                        </div>
+                        <div class="p-5 border-b-4 border-secondary">
+                            <h4 class="font-bold text-lg text-dark leading-tight">Francisco Sérgio</h4>
+                            <p class="text-secondary font-bold text-sm uppercase mt-1">Fiscal Titular</p>
+                        </div>
+                    </div>
+
+                    <!-- Card Membro 7 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
+                        <div class="h-64 overflow-hidden relative bg-gray-200">
+                            <img src="../images/Gestão/Fiscal titular2.jpeg"
+                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                                alt="Fiscal">
+                        </div>
+                        <div class="p-5 border-b-4 border-primary">
+                            <h4 class="font-bold text-lg text-dark leading-tight">Francisco das Chagas</h4>
+                            <p class="text-primary font-bold text-sm uppercase mt-1">Fiscal Titular</p>
+                        </div>
+                    </div>
+
+                    <!-- Card Membro 8 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
+                        <div class="h-64 overflow-hidden relative bg-gray-200">
+                            <img src="../images/Gestão/Fiscal suplente.jpeg"
+                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                                alt="Fiscal Suplente">
+                        </div>
+                        <div class="p-5 border-b-4 border-secondary">
+                            <h4 class="font-bold text-lg text-dark leading-tight">Abner Silva de Souza</h4>
+                            <p class="text-secondary font-bold text-sm uppercase mt-1">Fiscal Suplente</p>
+                        </div>
+                    </div>
+
+                    <!-- Card Membro 9 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
+                        <div class="h-64 overflow-hidden relative bg-gray-200">
+                            <img src="../images/Gestão/Fiscal suplente2.jpeg"
+                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                                alt="Fiscal Suplente">
+                        </div>
+                        <div class="p-5 border-b-4 border-primary">
+                            <h4 class="font-bold text-lg text-dark leading-tight">Júlia Maria Mendes</h4>
+                            <p class="text-primary font-bold text-sm uppercase mt-1">Fiscal Suplente</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Estatuto -->
+            <section class="flex justify-center pt-8 border-t border-gray-200">
+                <a href="../media/Estatuto do Lar do Padre Guido.pdf" target="_blank"
+                    class="inline-flex items-center gap-3 bg-dark hover:bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-xl hover:-translate-y-1 group">
+                    <div class="bg-white/10 p-2 rounded-lg group-hover:bg-white/20 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span>Acessar Estatuto Oficial</span>
                 </a>
-            </div>
+            </section>
 
-            <!-- Links de Paginas -->
-            <div class="footer-links">
-                <h3>Menu</h3>
-                <a href="../../index.html">Home</a>
-                <a href="../html/projects.html">Projetos</a>
-                <a href="../html/stories.html">Histórias</a>
-                <a href="#">Gestão</a>
-                <a href="../html/pr.guido-history.html">Sobre Pe.Guido</a>
-                <a href="../html/donate.html">Doe Agora</a>
-            </div>
+        </div>
+    </main>
 
-            <!--Noticias do instagram reduzidas-->
-            <div class="footer-news">
-                <h3>Siga-nos no Instagram</h3>
-                <div class="footer-news-group">
-
-                    <!-- Primeira Linha -->
-                    <div class="footer-news-row">
-
-                        <!--Noticia Topo Esquerda-->
-                        <div class="footer-news-card">
-                            <a href="https://www.instagram.com/projetoesperanca_/" target="_blank">
-                                <img src="../images/footer1.png" alt="">
-                            </a>
-                        </div>
-
-                        <!--Noticia Topo Direita-->
-                        <div class="footer-news-card">
-                            <a href="https://www.instagram.com/projetoesperanca_/" target="_blank">
-                                <img src="../images/footer2.png" alt="">
-                            </a>
+    <!-- RODAPÉ -->
+    <footer class="bg-white border-t-4 border-primary pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div class="flex flex-col items-center md:items-start text-center md:text-left space-y-6">
+                    <div class="flex items-center gap-3">
+                        <img src="../images/projeto_esperanca_logo.svg" alt="Logo" class="w-16 h-auto">
+                        <div>
+                            <h3 class="text-xl font-bold text-secondary uppercase">Projeto Esperança</h3>
+                            <p class="text-sm text-gray-500">Pe. Guildo Tonelotto</p>
                         </div>
                     </div>
-
-                    <!-- Segunda Linha -->
-                    <div class="footer-news-row">
-
-                        <!--Noticia Fundo Esquerda-->
-                        <div class="footer-news-card">
-                            <a href="https://www.instagram.com/projetoesperanca_/" target="_blank">
-                                <img src="../images/footer3.png" alt="">
-                            </a>
-                        </div>
-
-
-                        <!--Noticia Fundo Direita-->
-                        <div class="footer-news-card">
-                            <a href="https://www.instagram.com/projetoesperanca_/" target="_blank">
-                                <img src="../images/footer4.png" alt="">
-                            </a>
-                        </div>
-
-
+                    <p class="text-gray-600 max-w-sm">
+                        Ajude o Projeto Esperança a continuar transformando vidas.
+                    </p>
+                    <a href="./donate.html"
+                        class="bg-primary hover:bg-primaryDark text-white font-bold py-3 px-8 rounded-full shadow-md transition-colors">Quero
+                        Doar</a>
+                </div>
+                <div class="flex flex-col items-center">
+                    <h3 class="text-dark font-bold text-lg mb-6 border-b-2 border-primary pb-2">Menu</h3>
+                    <ul class="space-y-3 text-center">
+                        <li><a href="../../index.html" class="text-gray-600 hover:text-primary">Home</a></li>
+                        <li><a href="./projects.html" class="text-gray-600 hover:text-primary">Projetos</a></li>
+                        <li><a href="./stories.html" class="text-gray-600 hover:text-primary">Histórias</a></li>
+                        <li><a href="./management.html" class="text-primary font-bold">Gestão</a></li>
+                        <li><a href="./donate.html" class="text-gray-600 hover:text-primary">Doe Agora</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col items-center">
+                    <h3 class="text-dark font-bold text-lg mb-6 border-b-2 border-primary pb-2">Siga-nos</h3>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/projetoesperanca_/" target="_blank"><img
+                                src="../images/svg-instagram.svg"
+                                class="w-8 h-8 hover:opacity-80 transition-opacity"></a>
+                        <a href="https://www.youtube.com/@projetoesperanca6744" target="_blank"><img
+                                src="../images/svg-youtube.svg" class="w-8 h-8 hover:opacity-80 transition-opacity"></a>
                     </div>
                 </div>
             </div>
-        </div>
-
-
-        <div class="footer-line"></div>
-
-        <!--Parte de baixo do Rodape-->
-        <div class="footer-bottom">
-            <p>Copyright © 2024 Projeto Esperança</p>
-
-            <!--Icones de redes sociais -->
-            <div class="footer-bottom-icon-links">
-                
-                <a href="https://www.instagram.com/projetoesperanca_/" target="_blank"><img src="../images/svg-instagram.svg" alt=""></a>
-                <a href="https://www.youtube.com/@projetoesperanca6744" target="_blank"><img src="../images/svg-youtube.svg" alt=""></a>
+            <div class="border-t border-gray-200 pt-8 text-center">
+                <p class="text-gray-500 text-sm">© 2024 Projeto Esperança. Todos os direitos reservados.</p>
             </div>
         </div>
-    </section>
+    </footer>
 
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
 </body>
 
 </html>

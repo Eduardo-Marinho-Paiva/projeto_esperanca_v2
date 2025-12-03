@@ -1,261 +1,133 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doar agora</title>
-    <link rel="stylesheet" href="../css/basic.css">
-    <link rel="stylesheet" href="../css/donate.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/wpp-contact.css">
-    <link rel="icon" href="../images/projeto_esperanca_logo.svg">
-    <script src="../js/header_mobile.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doe Agora - Projeto Esperança</title>
+    <link rel="icon" href="../images/projeto_esperanca_logo.svg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#F47701',
+                        primaryDark: '#d36702',
+                        secondary: '#0AA550',
+                        dark: '#161618',
+                        light: '#F9F9FF',
+                    },
+                    fontFamily: {
+                        sans: ['DM Sans', 'sans-serif'],
+                        display: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 </head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
 
-<body>
-    <!-- Cabeçalho -->
-    <section class="header">
-        <div class="header-logo"> <!--logo-->
-            <a href ="../../index.html" target="_blank"><img src="../images/projeto_esperanca_logo.svg" alt=""></a>
-            <div class="header-logo-text">
-                <h3>Projeto Esperança</h3>
-                <p>Pe. Guildo Tonelotto</p>
-            </div>
-            <a href="#" class="icone_menu">
-                <div id="icm" class="header-button">
-                    ☰
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 h-20 flex justify-between items-center">
+            <a href="../../index.html" class="flex items-center gap-3">
+                <img src="../images/projeto_esperanca_logo.svg" alt="Logo" class="h-12 w-auto" />
+                <div class="hidden md:flex flex-col">
+                    <h1 class="text-secondary font-display font-bold text-lg uppercase">Projeto Esperança</h1>
+                    <p class="text-dark text-xs font-medium">Pe. Guido Tonelotto</p>
                 </div>
             </a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="../../index.html" class="text-dark hover:text-primary font-bold">Home</a>
+                <a href="./projects.html" class="text-dark hover:text-primary font-bold">Projetos</a>
+                <a href="./management.html" class="text-dark hover:text-primary font-bold">Gestão</a>
+                <a href="./stories.html" class="text-dark hover:text-primary font-bold">Histórias</a>
+                <a href="./pr.guido-history.html" class="text-dark hover:text-primary font-bold">Sobre Pe. Guido</a>
+                <a href="./donate.html" class="bg-primary hover:bg-primaryDark text-white px-6 py-2 rounded-full font-bold shadow-lg">Doe Agora</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden text-dark"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
         </div>
-
-        <div class="header-button-group"> <!-- botões -->
-            <a href="../../index.html">
-                <div class="header-button">Home</div>
-            </a>
-            <a href="../html/projects.html">
-                <div class="header-button">Projetos</div>
-            </a>
-            <a href="../html/management.html">
-                <div class="header-button">Gestão</div>
-            </a>
-            <a href="../html/stories.html">
-                <div class="header-button">Histórias</div>
-            </a>
-            <a href="../html/pr.guido-history.html">
-                <div class="header-button">Sobre Pe.Guido</div>
-            </a>
-            <a href="#">
-                <div class="header-button donate-button">Doe Agora</div>
-            </a>
-        </div>
-    </section>
-
-    <section class="donate-methods">
-        <h3 id="methods">MÉTODOS DE DOAÇÃO</h3>
-        <h3>Escolha sua forma de doação</h3>
-        <div class="donate-methods-card-group">
-            <div class="donate-card">
-                <div class="donate-card-left"> <!--div para centralizar informações da versão mobile-->
-                    <img src="../images/ROUPAS.png" alt="">
-                </div>
-                <div class="donate-card-right"> <!--div para centralizar informações da versão mobile-->
-                    <h3>Roupas</h3>
-                    <p>
-                        Doe roupas novas ou usadas em bom estado e ajude a levar conforto e
-                        dignidade a quem mais precisa.
-                    </p>
-                    <a href="./cloath.html">
-                        <div class="donate-method-button">Doe já</div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="donate-card">
-                <div class="donate-card-left"> <!--div para centralizar informações da versão mobile-->
-                    <img src="../images/PIX.png" alt="">
-                </div>
-                <div class="donate-card-right"> <!--div para centralizar informações da versão mobile-->
-                    <h3>PIX</h3>
-                    <p>
-                        Contribua de forma rápida e segura via PIX. Sua doação fortalece nossas ações e amplia
-                        nosso
-                        alcance.
-                    </p>
-                    <a href="./pix.html">
-                        <div class="donate-method-button">Doe já</div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="donate-card">
-                <div class="donate-card-left"> <!--div para centralizar informações da versão mobile-->
-                    <img src="../images/TRANSFERENCIA.png" alt="">
-                </div>
-                <div class="donate-card-right"> <!--div para centralizar informações da versão mobile-->
-                    <h3>Transferência</h3>
-                    <p>
-                        Prefere doar por transferência? Contribua para nossa conta e faça parte da missão de
-                        transformar vidas.
-                    </p>
-                    <a href="./transfer.html">
-                        <div class="donate-method-button">Doe já</div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Por que Doar -->
-    <section class="why-donate">
-        <div class="why-donate-central-div">
-            <div class="why-donate-left-side"><!-- lado esquerdo-->
-                <div class="why-donate-left-side-text">
-                    <h3>Por que doar?</h3>
-                    <p>
-                        Sua doação ajuda o Projeto Esperança a transformar vidas e apoiar quem mais precisa. Com seu
-                        apoio, fortalecemos a comunidade, promovemos ações educacionais e culturais e levamos esperança
-                        a centenas de famílias. Juntos, podemos construir um futuro melhor.
-                    </p>
-                </div>
-            </div>
-            <div class="why-donate-right-side"> <!-- lado direito-->
-            </div>
-        </div>
-    </section>
-
-    <!-- + Informações-->
-    <section class="donate-info">
-        <div class="donate-info-central-div">
-            <div class="donate-info-img"> 
-                <img src="../images/donate-info.png" alt="">
-            </div>
-            <div class="donate-info-text">
-                <img src="../images/heart.svg" alt="">
-                <h3>Juntos,<br>espalhamos esperança</h3>
-                <p>Sua doação ao Projeto Esperança leva dignidade e apoio a famílias em vulnerabilidade, financiando
-                    ações como distribuição de alimentos e materiais educativos. Cada contribuição fortalece nossa
-                    rede de apoio e promove inclusão social. Faça parte dessa transformação!</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Whatsapp -->
-    <section class="wpp-contact">
-        <div class="wpp-contact-main-div">
-            <div class="wpp-contact-main-div-text">
-                <h3>Precisa de mais informação?</h3>
-                <p>Escreva para nós e responderemos o mais breve possível</p>
-            </div>
-            <a href="https://api.whatsapp.com/send?phone=5584981868964" target="_blank">
-                <div class="wpp-contact-main-div-button">
-                    Whatsapp
-                </div>
-            </a>
-        </div>
-    </section>
-
-    <!-- Rodapé -->
-    <section class="footer">
-        <!--Parte de cima do rodapé -->
-        <div class="footer-top">
-
-            <!--Informações e chamada para doação -->
-            <div class="footer-donate">
-                <div class="footer-logo"> <!--logo-->
-                    <img src="../images/projeto_esperanca_logo.svg" alt="">
-                    <div class="footer-logo-text">
-                        <h3>Projeto Esperança</h3>
-                        <p>Pe. Guildo Tonelotto</p>
-                    </div>
-                </div>
-                <p>Ajude o Projeto Esperança a continuar<br>
-                    transformando vidas. Com sua doação, podemos<br>
-                    alcançar mais pessoas e levar esperança a quem<br>
-                    mais precisa.</p>
-
-                <a href="../html/donate.html">
-                    <div class="footer-button">Doe agora</div>
-                </a>
-            </div>
-
-            <!-- Links de Paginas -->
-            <div class="footer-links">
-                <h3>Menu</h3>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
+            <div class="flex flex-col p-4 space-y-4 font-semibold text-center">
                 <a href="../../index.html">Home</a>
-                <a href="../html/projects.html">Projetos</a>
-                <a href="../html/stories.html">Histórias</a>
-                <a href="../html/management.html">Gestão</a>
-                <a href="../html/pr.guido-history.html">Sobre Pe.Guido</a>
-                <a href="#">Doe Agora</a>
+                <a href="./projects.html">Projetos</a>
+                <a href="./donate.html" class="bg-primary text-white py-3 rounded-xl mx-4">Doe Agora</a>
             </div>
+        </div>
+    </header>
 
-            <!--Noticias do instagram reduzidas-->
-            <div class="footer-news">
-                <h3>Siga-nos no Instagram</h3>
-                <div class="footer-news-group">
+    <main class="flex-grow">
+        <!-- Intro -->
+        <div class="bg-primary text-white py-16 text-center">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-display font-bold mb-4">Escolha sua forma de doação</h2>
+                <p class="text-xl text-orange-100 max-w-2xl mx-auto">Sua contribuição transforma vidas e fortalece nossa comunidade.</p>
+            </div>
+        </div>
 
-                    <!-- Primeira Linha -->
-                    <div class="footer-news-row">
-
-                        <!--Noticia Topo Esquerda-->
-                        <div class="footer-news-card">
-                            <a href="https://www.instagram.com/projetoesperanca_/" target="_blank">
-                                <img src="../images/footer1.png" alt="">
-                            </a>
-                        </div>
-
-                        <!--Noticia Topo Direita-->
-                        <div class="footer-news-card">
-                            <a href="https://www.instagram.com/projetoesperanca_/" target="_blank">
-                                <img src="../images/footer2.png" alt="">
-                            </a>
-                        </div>
+        <!-- Cards de Doação -->
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto -mt-24">
+                
+                <!-- Card Roupas -->
+                <div class="bg-white rounded-3xl shadow-xl p-8 flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300 border border-gray-100">
+                    <div class="bg-orange-50 p-6 rounded-full mb-6">
+                        <img src="../images/ROUPAS.png" class="w-16 h-16 object-contain" alt="Roupas">
                     </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Roupas</h3>
+                    <p class="text-gray-500 mb-8 flex-grow">Doe roupas novas ou usadas em bom estado e leve conforto e dignidade.</p>
+                    <a href="./cloath.html" class="bg-dark hover:bg-primary text-white font-bold py-3 px-8 rounded-full w-full transition-colors">Doe Roupas</a>
+                </div>
 
-                    <!-- Segunda Linha -->
-                    <div class="footer-news-row">
-
-                        <!--Noticia Fundo Esquerda-->
-                        <div class="footer-news-card">
-                            <a href="https://www.instagram.com/projetoesperanca_/" target="_blank">
-                                <img src="../images/footer3.png" alt="">
-                            </a>
-                        </div>
-
-
-                        <!--Noticia Fundo Direita-->
-                        <div class="footer-news-card">
-                            <a href="https://www.instagram.com/projetoesperanca_/" target="_blank">
-                                <img src="../images/footer4.png" alt="">
-                            </a>
-                        </div>
-
-
+                <!-- Card PIX -->
+                <div class="bg-white rounded-3xl shadow-xl p-8 flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300 border-2 border-primary transform md:scale-105 z-10 relative">
+                    <div class="absolute top-0 right-0 bg-secondary text-white text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl">MAIS RÁPIDO</div>
+                    <div class="bg-orange-50 p-6 rounded-full mb-6">
+                        <img src="../images/PIX.png" class="w-16 h-16 object-contain" alt="Pix">
                     </div>
+                    <h3 class="text-2xl font-bold text-primary mb-4">PIX</h3>
+                    <p class="text-gray-500 mb-8 flex-grow">Contribua de forma rápida e segura. Sua doação chega instantaneamente.</p>
+                    <a href="./pix.html" class="bg-primary hover:bg-primaryDark text-white font-bold py-3 px-8 rounded-full w-full transition-colors shadow-lg">Fazer um PIX</a>
+                </div>
+
+                <!-- Card Transferência -->
+                <div class="bg-white rounded-3xl shadow-xl p-8 flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300 border border-gray-100">
+                    <div class="bg-orange-50 p-6 rounded-full mb-6">
+                        <img src="../images/TRANSFERENCIA.png" class="w-16 h-16 object-contain" alt="Banco">
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Transferência</h3>
+                    <p class="text-gray-500 mb-8 flex-grow">Prefere doar via TED ou DOC? Utilize nossa conta bancária oficial.</p>
+                    <a href="./transfer.html" class="bg-dark hover:bg-primary text-white font-bold py-3 px-8 rounded-full w-full transition-colors">Ver Dados</a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Por que doar -->
+        <section class="container mx-auto px-4 py-16 mb-16">
+            <div class="bg-white rounded-3xl shadow-lg overflow-hidden flex flex-col md:flex-row">
+                <div class="md:w-1/2 p-12 flex flex-col justify-center bg-primary text-white">
+                    <h3 class="text-3xl font-display font-bold mb-6">Por que doar?</h3>
+                    <p class="text-lg leading-relaxed text-orange-50">
+                        Sua doação ajuda o Projeto Esperança a transformar vidas. Com seu apoio, fortalecemos a comunidade, promovemos ações educacionais e levamos esperança a centenas de famílias. Juntos, construímos um futuro melhor.
+                    </p>
+                </div>
+                <div class="md:w-1/2 bg-gray-200" style="background-image: url('../images/donate1.png'); background-size: cover; background-position: center;">
                 </div>
             </div>
-        </div>
+        </section>
 
+    </main>
 
-        <div class="footer-line"></div>
+    <footer class="bg-white border-t-4 border-primary pt-8 pb-8 text-center">
+        <p class="text-gray-500 text-sm">© 2024 Projeto Esperança. Todos os direitos reservados.</p>
+    </footer>
 
-        <!--Parte de baixo do Rodape-->
-        <div class="footer-bottom">
-            <p>Copyright © 2024 Projeto Esperança</p>
-
-            <!--Icones de redes sociais -->
-            <div class="footer-bottom-icon-links">
-                
-                <a href="https://www.instagram.com/projetoesperanca_/" target="_blank"><img src="../images/svg-instagram.svg" alt=""></a>
-                <a href="https://www.youtube.com/@projetoesperanca6744" target="_blank"><img src="../images/svg-youtube.svg" alt=""></a>
-            </div>
-        </div>
-    </section>
-
-
-
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
 </body>
-
 </html>

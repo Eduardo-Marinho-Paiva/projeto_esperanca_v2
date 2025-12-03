@@ -1,265 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nossas Histórias</title>
-    <link rel="stylesheet" href="../css/basic.css">
-    <link rel="stylesheet" href="../css/stories.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/wpp-contact.css">
-    <link rel="icon" href="../images/projeto_esperanca_logo.svg">
-    <script src="../js/header_mobile.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Histórias - Projeto Esperança</title>
+    <link rel="icon" href="../images/projeto_esperanca_logo.svg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#F47701',
+                        primaryDark: '#d36702',
+                        secondary: '#0AA550',
+                        dark: '#161618',
+                        light: '#F9F9FF',
+                    },
+                    fontFamily: {
+                        sans: ['DM Sans', 'sans-serif'],
+                        display: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 </head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
 
-<body>
-
-    <!-- Cabeçalho -->
-    <section class="header">
-        <div class="header-logo"> <!--logo-->
-            <a href ="../../index.html" target="_blank"><img src="../images/projeto_esperanca_logo.svg" alt=""></a>
-            <div class="header-logo-text">
-                <h3>Projeto Esperança</h3>
-                <p>Pe. Guildo Tonelotto</p>
-            </div>
-            <a href="#" class="icone_menu">
-                <div id="icm" class="header-button">
-                    ☰
+    <!-- Header (Padrão) -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 h-20 flex justify-between items-center">
+            <a href="../../index.html" class="flex items-center gap-3">
+                <img src="../images/projeto_esperanca_logo.svg" alt="Logo" class="h-12 w-auto" />
+                <div class="hidden md:flex flex-col">
+                    <h1 class="text-secondary font-display font-bold text-lg uppercase">Projeto Esperança</h1>
+                    <p class="text-dark text-xs font-medium">Pe. Guido Tonelotto</p>
                 </div>
             </a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="../../index.html" class="text-dark hover:text-primary font-bold">Home</a>
+                <a href="./projects.html" class="text-dark hover:text-primary font-bold">Projetos</a>
+                <a href="./management.html" class="text-dark hover:text-primary font-bold">Gestão</a>
+                <a href="./stories.html" class="text-primary font-bold">Histórias</a>
+                <a href="./pr.guido-history.html" class="text-dark hover:text-primary font-bold">Sobre Pe. Guido</a>
+                <a href="./donate.html" class="bg-primary hover:bg-primaryDark text-white px-6 py-2 rounded-full font-bold shadow-lg">Doe Agora</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden text-dark"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
         </div>
-
-        <div class="header-button-group"> <!-- botões -->
-            <a href="../../index.html">
-                <div class="header-button">Home</div>
-            </a>
-            <a href="../html/projects.html">
-                <div class="header-button">Projetos</div>
-            </a>
-            <a href="../html/management.html">
-                <div class="header-button">Gestão</div>
-            </a>
-            <a href="#">
-                <div class="header-button">Histórias</div>
-            </a>
-            <a href="../html/pr.guido-history.html">
-                <div class="header-button">Sobre Pe.Guido</div>
-            </a>
-            <a href="../html/donate.html">
-                <div class="header-button donate-button">Doe Agora</div>
-            </a>
-        </div>
-    </section>
-
-
-    <section class="stories-intro">
-        <h3 class="stories-intro-title">Conheça Aqui Nossas Histórias</h3>
-    </section>
-
-    <section class="stories-card-group">
-
-
-        <div class="stories-card">
-            <iframe class="stories-card-img" src="https://www.youtube.com/embed/zPrlmCw3n_Q?si=XdPlmExDuZ9Ueoy2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <div class="stories-card-resume">
-                <h3 class="storie-title">
-                    Nilton César
-                </h3>
-                <p class="storie-resume">
-                    Nilton relembra uma trajetória marcada por fé, música e amizade. Ele conta como, ainda adolescente, entrou para o grupo de acólitos, participou de reuniões e momentos de oração, e recebeu conselhos que moldaram sua vida. A convivência foi crescendo até se tornar motorista e companheiro diário, cultivando um relacionamento de confiança e carinho, quase como de pai e filho.
-                    <br><br>    
-                    Entre lembranças emocionantes, Nilton revela também como nasceu sua paixão pela música: do interesse por um pequeno órgão na igreja ao incentivo que lhe rendeu seu primeiro teclado. A música o levou a tocar missas, formar repertório e seguir carreira. Uma história de fé, amizade e caminhos que se estendem muito além do que se imagina.
-                </p>
-            </div>
-        </div>
-
-
-        <div class="stories-card">
-            <iframe class="stories-card-img" src="https://www.youtube.com/embed/paqulA2nL68?si=xYailMerFf8b_Neq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <div class="stories-card-resume">
-                <h3 class="storie-title">
-                    Elias Francisco
-                </h3>
-                <p class="storie-resume">
-                    Elias conheceu o projeto quando ainda era apenas um sonho no coração do Padre Guido, funcionando dentro da paróquia com o grupo "Pequenos Vendedores", que acolhia meninos de rua. Elias participou como coroinha e, anos depois, voltou como voluntário, sentindo no coração que devia retribuir tudo que o projeto lhe deu em formação e educação. Hoje, além de ajudar sempre que pode, ele coordena o grupo "Esperança Viva", que usa o espaço do projeto para encontros semanais.
-                </p>
-            </div>
-        </div>
-
-
-        <div class="stories-card">
-            <iframe class="stories-card-img" src="https://www.youtube.com/embed/DeANrALncRI?si=HeY4YfADhQVR2Xby" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <div class="stories-card-resume">
-                <h3 class="storie-title">
-                    Francisco Sérgio
-                </h3>
-                <p class="storie-resume">
-                    Sérgio entrou no projeto em 1985, quando ainda se chamava "Pequenos Vendedores" e atendia crianças e adolescentes que trabalhavam nas ruas. Começou como coroinha e depois ajudava distribuindo lanches e levando os meninos ao médico. Em 1990, o projeto cresceu, ganhou o nome "Esperança" e firmou parcerias com empresas e instituições, oferecendo trabalho para jovens e atividades como taekwondo e capoeira. Na época, chegou a atender mais de 300 crianças de famílias carentes, dando a elas oportunidade de estudo e trabalho.
-                    <br><br>
-                    Sérgio batizou seu filho mais velho (hoje formado em Direito) e até comprou sua primeira casa com ajuda do Padre Guido. Ele destaca que o maior legado do projeto é a educação, formando profissionais que hoje são médicos, comerciantes e líderes. Mesmo depois de tantos anos, o Projeto Esperança continua firme, ajudando os mais vulneráveis.
-                </p>
-            </div>
-        </div>
-
-
-        <div class="stories-card">
-            <iframe class="stories-card-img" src="https://www.youtube.com/embed/ZEgjuBqNjmE?si=bEPR13m4N4nCvhUK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <div class="stories-card-resume">
-                <h3 class="storie-title">
-                    Francisco Canindé
-                </h3>
-                <p class="storie-resume">
-                    Em 1981, com apenas 11 anos, ele trabalhava lavando carros no antigo mercado Jumbo quando o Padre Guido, junto a voluntários como Dona Elizabeth e Fabíula Valle, o convidou para participar do projeto que ainda estava começando. Por três anos, essas atividades lhe deram não só diversão, mas também valores que o marcaram para sempre — como a lição do Padre Guido: "Menino tem que ser do bem."
-                    <br><br>
-                    Apesar de uma infância difícil, a orientação e o apoio recebidos o ajudaram a se tornar um cidadão de bem e a conquistar seus êxitos na vida. Para ele, o projeto foi uma mão amiga em meio à dificuldade, e essa gratidão permanece viva até hoje.
-                </p>
-            </div>
-        </div>
-
-
-    </section>
-
-
-
-
-
-
-
-    <!-- Whatsapp -->
-    <section class="wpp-contact">
-        <div class="wpp-contact-main-div">
-            <div class="wpp-contact-main-div-text">
-                <h3>Precisa de mais informação?</h3>
-                <p>Escreva para nós e responderemos o mais breve possível</p>
-            </div>
-            <a href="https://api.whatsapp.com/send?phone=5584981868964" target="_blank">
-                <div class="wpp-contact-main-div-button">
-                    Whatsapp
-                </div>
-            </a>
-        </div>
-    </section>
-
-
-    <!-- Rodapé -->
-    <section class="footer">
-        <!--Parte de cima do rodapé -->
-        <div class="footer-top">
-
-            <!--Informações e chamada para doação -->
-            <div class="footer-donate">
-                <div class="footer-logo"> <!--logo-->
-                    <img src="../images/projeto_esperanca_logo.svg" alt="">
-                    <div class="footer-logo-text">
-                        <h3>Projeto Esperança</h3>
-                        <p>Pe. Guildo Tonelotto</p>
-                    </div>
-                </div>
-                <p>Ajude o Projeto Esperança a continuar<br>
-                    transformando vidas. Com sua doação, podemos<br>
-                    alcançar mais pessoas e levar esperança a quem<br>
-                    mais precisa.</p>
-
-                <a href="../html/donate.html">
-                    <div class="footer-button">Doe agora</div>
-                </a>
-            </div>
-
-            <!-- Links de Paginas -->
-            <div class="footer-links">
-                <h3>Menu</h3>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
+            <div class="flex flex-col p-4 space-y-4 font-semibold text-center">
                 <a href="../../index.html">Home</a>
-                <a href="../html/projects.html">Projetos</a>
-                <a href="#">Histórias</a>
-                <a href="../html/management.html">Gestão</a>
-                <a href="../html/pr.guido-history.html">Sobre Pe.Guido</a>
-                <a href="../html/donate.html">Doe Agora</a>
+                <a href="./projects.html">Projetos</a>
+                <a href="./management.html">Gestão</a>
+                <a href="./stories.html" class="text-primary">Histórias</a>
+                <a href="./pr.guido-history.html">Sobre Pe. Guido</a>
             </div>
+        </div>
+    </header>
 
-            <!--Noticias do instagram reduzidas-->
-            <div class="footer-news">
-                <h3>Siga-nos no Instagram</h3>
-                <div class="footer-news-group">
+    <main class="flex-grow py-16">
+        <div class="container mx-auto px-4 text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-display font-bold text-primary mb-4">Conheça Nossas Histórias</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Relatos emocionantes de quem teve a vida transformada pelo Projeto Esperança.</p>
+        </div>
 
-                    <!-- Primeira Linha -->
-                    <div class="footer-news-row">
-
-                        <!--Noticia Topo Esquerda-->
-                        <div class="footer-news-card">
-                            <a href="https://www.instagram.com/projetoesperanca_/" target="_blank">
-                                <img src="../images/footer1.png" alt="">
-                            </a>
-                        </div>
-
-                        <!--Noticia Topo Direita-->
-                        <div class="footer-news-card">
-                            <a href="https://www.instagram.com/projetoesperanca_/" target="_blank">
-                                <img src="../images/footer2.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Segunda Linha -->
-                    <div class="footer-news-row">
-
-                        <!--Noticia Fundo Esquerda-->
-                        <div class="footer-news-card">
-                            <a href="https://www.instagram.com/projetoesperanca_/" target="_blank">
-                                <img src="../images/footer3.png" alt="">
-                            </a>
-                        </div>
-
-
-                        <!--Noticia Fundo Direita-->
-                        <div class="footer-news-card">
-                            <a href="https://www.instagram.com/projetoesperanca_/" target="_blank">
-                                <img src="../images/footer4.png" alt="">
-                            </a>
-                        </div>
-
-
-                    </div>
+        <div class="container mx-auto px-4 space-y-12">
+            
+            <!-- Card 1 -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row hover:shadow-2xl transition-shadow duration-300">
+                <div class="md:w-1/2 aspect-video bg-black">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/zPrlmCw3n_Q?si=XdPlmExDuZ9Ueoy2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold text-primary mb-4 font-display">Nilton César</h3>
+                    <p class="text-gray-600 leading-relaxed text-justify">
+                        Nilton relembra uma trajetória marcada por fé, música e amizade. Ele conta como, ainda adolescente, entrou para o grupo de acólitos e recebeu conselhos que moldaram sua vida. A convivência com o Padre Guido foi crescendo até se tornar quase como de pai e filho. A música o levou a tocar missas e seguir carreira.
+                    </p>
                 </div>
             </div>
-        </div>
 
-
-        <div class="footer-line"></div>
-
-        <!--Parte de baixo do Rodape-->
-        <div class="footer-bottom">
-            <p>Copyright © 2024 Projeto Esperança</p>
-
-            <!--Icones de redes sociais -->
-            <div class="footer-bottom-icon-links">
-                
-                <a href="https://www.instagram.com/projetoesperanca_/" target="_blank"><img src="../images/svg-instagram.svg" alt=""></a>
-                <a href="https://www.youtube.com/@projetoesperanca6744" target="_blank"><img src="../images/svg-youtube.svg" alt=""></a>
+            <!-- Card 2 -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row-reverse hover:shadow-2xl transition-shadow duration-300">
+                <div class="md:w-1/2 aspect-video bg-black">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/paqulA2nL68?si=xYailMerFf8b_Neq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold text-primary mb-4 font-display">Elias Francisco</h3>
+                    <p class="text-gray-600 leading-relaxed text-justify">
+                        Elias conheceu o projeto quando ainda era apenas um sonho no coração do Padre Guido, funcionando com o grupo "Pequenos Vendedores". Anos depois, voltou como voluntário, sentindo no coração que devia retribuir tudo que o projeto lhe deu em formação e educação. Hoje coordena o grupo "Esperança Viva".
+                    </p>
+                </div>
             </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row hover:shadow-2xl transition-shadow duration-300">
+                <div class="md:w-1/2 aspect-video bg-black">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/DeANrALncRI?si=HeY4YfADhQVR2Xby" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold text-primary mb-4 font-display">Francisco Sérgio</h3>
+                    <p class="text-gray-600 leading-relaxed text-justify">
+                        Sérgio entrou no projeto em 1985. Começou como coroinha e viu o projeto crescer. Ele destaca que o maior legado é a educação, formando profissionais que hoje são médicos e líderes. Sérgio batizou seu filho com ajuda do Padre Guido e hoje vê os frutos dessa longa caminhada.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row-reverse hover:shadow-2xl transition-shadow duration-300">
+                <div class="md:w-1/2 aspect-video bg-black">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/ZEgjuBqNjmE?si=bEPR13m4N4nCvhUK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold text-primary mb-4 font-display">Francisco Canindé</h3>
+                    <p class="text-gray-600 leading-relaxed text-justify">
+                        Em 1981, com apenas 11 anos, trabalhava lavando carros quando foi convidado para o projeto. As atividades lhe deram valores que o marcaram para sempre, como a lição: "Menino tem que ser do bem." Apesar de uma infância difícil, a orientação recebida o ajudou a se tornar um cidadão de bem.
+                    </p>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </main>
+
+    <!-- Footer Padrão -->
+    <footer class="bg-white border-t-4 border-primary pt-16 pb-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-500 text-sm">© 2024 Projeto Esperança. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
 </body>
-
 </html>
-
-
-<!--
-    Blueprint:
-
-        <section class="stories-card-group">
-        <div class="stories-card">
-            <img src="" class="stories-card-img" alt="Imagem">
-            <div class="stories-card-resume">
-                <h3 class="storie-title">
-
-                </h3>
-                <p class="storie-resume">
-                    
-                </p>
-            </div>
-        </div>
-    </section>
-
--->

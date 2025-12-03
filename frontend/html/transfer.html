@@ -1,187 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doar via Transferência</title>
-    <link rel="stylesheet" href="../css/basic.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/wpp-contact.css">
-    <link rel="stylesheet" href="../css/cloath.css">
-    <link rel="icon" href="../images/projeto_esperanca_logo.svg">
-    <script src="../js/header_mobile.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transferência - Projeto Esperança</title>
+    <link rel="icon" href="../images/projeto_esperanca_logo.svg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#F47701', dark: '#161618' }, fontFamily: { display: ['Poppins', 'sans-serif'] } } } }</script>
 </head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
 
-<body>
+    <header class="bg-white shadow-sm p-4 text-center sticky top-0 z-50">
+        <a href="donate.html" class="text-primary font-bold hover:underline flex items-center justify-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            Voltar para Doações
+        </a>
+    </header>
 
-    <!-- Cabeçalho -->
-    <section class="header">
-        <div class="header-logo"> <!--logo-->
-            <a href ="../../index.html" target="_blank"><img src="../images/projeto_esperanca_logo.svg" alt=""></a>
-            <div class="header-logo-text">
-                <h3>Projeto Esperança</h3>
-                <p>Pe. Guildo Tonelotto</p>
-            </div>
-            <a href="#" class="icone_menu">
-                <div id="icm" class="header-button">
-                    ☰
+    <main class="flex-grow flex items-center justify-center py-12 px-4">
+        <div class="bg-white rounded-3xl shadow-xl max-w-2xl w-full p-8 md:p-12 border-t-8 border-primary">
+            <img src="../images/TRANSFERENCIA.png" class="w-24 h-24 mx-auto mb-6 bg-orange-50 rounded-full p-4" alt="Banco">
+            
+            <h2 class="text-3xl md:text-4xl font-display font-bold text-dark mb-8 text-center">Dados Bancários</h2>
+            
+            <div class="bg-gray-50 rounded-2xl p-8 space-y-4 border border-gray-200">
+                <div class="flex justify-between border-b border-gray-200 pb-2">
+                    <span class="text-gray-500 font-medium">Banco</span>
+                    <span class="text-dark font-bold">Banco do Brasil (001)</span>
                 </div>
-            </a>
-        </div>
-
-        <div class="header-button-group"> <!-- botões -->
-            <a href="../../index.html">
-                <div class="header-button">Home</div>
-            </a>
-            <a href="../html/projects.html">
-                <div class="header-button">Projetos</div>
-            </a>
-            <a href="../html/management.html">
-                <div class="header-button">Gestão</div>
-            </a>
-            <a href="../html/stories.html">
-                <div class="header-button">Histórias</div>
-            </a>
-            <a href="../html/pr.guido-history.html">
-                <div class="header-button">Sobre Pe.Guido</div>
-            </a>
-            <a href="../html/donate.html">
-                <div class="header-button donate-button">Doe Agora</div>
-            </a>
-        </div>
-    </section>
-
-    <!-- Informações da Conta  -->
-    <section class="collection-point">
-        <h3 id="methods">Método de doação</h3>
-        <h3>Transferência Bancária</h3>
-        <div class="collection-point-info">
-            <h3>Informações da Conta</h3>
-            <div class="collection-point-info-card">
-                <p><strong>Banco:</strong>Banco do Brasil</p>
-                <p><strong>Agência:</strong>4687-6B</p>
-                <p><strong>Conta:</strong> 7224-9</p>
-                <p><strong>CPF/CNPJ:</strong>40.772.436.0001-13</p>
-                <p><strong>Favorecido:</strong>Lar Guido Brasil </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Whatsapp -->
-    <section class="wpp-contact">
-        <div class="wpp-contact-main-div">
-            <div class="wpp-contact-main-div-text">
-                <h3>Precisa de mais informação?</h3>
-                <p>Escreva para nós e responderemos o mais breve possível</p>
-            </div>
-            <a href="https://api.whatsapp.com/send?phone=5584981868964" target="_blank">
-                <div class="wpp-contact-main-div-button">
-                    Whatsapp
+                <div class="flex justify-between border-b border-gray-200 pb-2">
+                    <span class="text-gray-500 font-medium">Agência</span>
+                    <span class="text-dark font-bold">4687-6</span>
                 </div>
-            </a>
-        </div>
-    </section>
-
-    <!-- Rodapé -->
-    <section class="footer">
-        <!--Parte de cima do rodapé -->
-        <div class="footer-top">
-
-            <!--Informações e chamada para doação -->
-            <div class="footer-donate">
-                <div class="footer-logo"> <!--logo-->
-                    <img src="../images/projeto_esperanca_logo.svg" alt="">
-                    <div class="footer-logo-text">
-                        <h3>Projeto Esperança</h3>
-                        <p>Pe. Guildo Tonelotto</p>
-                    </div>
+                <div class="flex justify-between border-b border-gray-200 pb-2">
+                    <span class="text-gray-500 font-medium">Conta Corrente</span>
+                    <span class="text-dark font-bold">7224-9</span>
                 </div>
-                <p>Ajude o Projeto Esperança a continuar<br>
-                    transformando vidas. Com sua doação, podemos<br>
-                    alcançar mais pessoas e levar esperança a quem<br>
-                    mais precisa.</p>
+                <div class="flex justify-between border-b border-gray-200 pb-2">
+                    <span class="text-gray-500 font-medium">Favorecido</span>
+                    <span class="text-dark font-bold">Lar Guido Brasil</span>
+                </div>
+                <div class="flex justify-between pt-2">
+                    <span class="text-gray-500 font-medium">CNPJ</span>
+                    <span class="text-dark font-bold font-mono">40.772.436/0001-13</span>
+                </div>
+            </div>
 
-                <a href="../html/donate.html">
-                    <div class="footer-button">Doe agora</div>
+            <p class="text-center text-gray-500 mt-8 text-sm">
+                Após realizar a transferência, por favor, envie o comprovante para nosso WhatsApp para identificarmos sua doação.
+            </p>
+            
+            <div class="mt-6 text-center">
+                <a href="https://api.whatsapp.com/send?phone=5584987610226" target="_blank" class="inline-flex items-center gap-2 text-green-600 font-bold hover:underline">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.017-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    Enviar Comprovante
                 </a>
             </div>
-
-            <!-- Links de Paginas -->
-            <div class="footer-links">
-                <h3>Menu</h3>
-                <a href="../../index.html">Home</a>
-                <a href="../html/projects.html">Projetos</a>
-                <a href="../html/stories.html">Histórias</a>
-                <a href="../html/management.html">Gestão</a>
-                <a href="../html/pr.guido-history.html">Sobre Pe.Guido</a>
-                <a href="../html/donate.html">Doe Agora</a>
-            </div>
-
-            <!--Noticias do instagram reduzidas-->
-            <div class="footer-news">
-                <h3>Siga-nos no Instagram</h3>
-                <div class="footer-news-group">
-
-                    <!-- Primeira Linha -->
-                    <div class="footer-news-row">
-
-                        <!--Noticia Topo Esquerda-->
-                        <div class="footer-news-card">
-                            <a href="https://www.instagram.com/projetoesperanca_/" target="_blank">
-                                <img src="../images/footer1.png" alt="">
-                            </a>
-                        </div>
-
-                        <!--Noticia Topo Direita-->
-                        <div class="footer-news-card">
-                            <a href="https://www.instagram.com/projetoesperanca_/" target="_blank">
-                                <img src="../images/footer2.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Segunda Linha -->
-                    <div class="footer-news-row">
-
-                        <!--Noticia Fundo Esquerda-->
-                        <div class="footer-news-card">
-                            <a href="https://www.instagram.com/projetoesperanca_/" target="_blank">
-                                <img src="../images/footer3.png" alt="">
-                            </a>
-                        </div>
-
-
-                        <!--Noticia Fundo Direita-->
-                        <div class="footer-news-card">
-                            <a href="https://www.instagram.com/projetoesperanca_/" target="_blank">
-                                <img src="../images/footer4.png" alt="">
-                            </a>
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
         </div>
+    </main>
 
-
-        <div class="footer-line"></div>
-
-        <!--Parte de baixo do Rodape-->
-        <div class="footer-bottom">
-            <p>Copyright © 2024 Projeto Esperança</p>
-
-            <!--Icones de redes sociais -->
-            <div class="footer-bottom-icon-links">
-                
-                <a href="https://www.instagram.com/projetoesperanca_/" target="_blank"><img src="../images/svg-instagram.svg" alt=""></a>
-                <a href="https://www.youtube.com/@projetoesperanca6744" target="_blank"><img src="../images/svg-youtube.svg" alt=""></a>
-            </div>
-        </div>
-    </section>
-
+    <footer class="bg-white border-t border-gray-200 py-6 text-center">
+        <p class="text-gray-500 text-sm">© 2024 Projeto Esperança</p>
+    </footer>
 </body>
-
 </html>

@@ -1,470 +1,344 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-br" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nossos Projetos</title>
-    <link rel="stylesheet" href="../css/basic.css">
-    <link rel="stylesheet" href="../css/projects.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/wpp-contact.css">
-    <link rel="icon" href="../images/projeto_esperanca_logo.svg">
-    <script src="../js/header_mobile.js"></script>
-    <script src="../js/projects_mobile.js"></script>
-</head>
-<body>
-
-    <!-- Cabeçalho -->
-    <section class="header">
-        <div class="header-logo"> <!--logo-->
-            <a href ="../../index.html" target="_blank"><img src="../images/projeto_esperanca_logo.svg" alt=""></a>
-            <div class="header-logo-text">
-                <h3>Projeto Esperança</h3>
-                <p>Pe. Guildo Tonelotto</p>
-            </div>
-            <a href="#" class="icone_menu"><div id="icm" class="header-button">☰</div></a>
-        </div>
-
-        <div class="header-button-group"> <!-- botões -->
-            <a href="../../index.html">
-                <div class="header-button">Home</div>
-            </a>
-            <a href="#">
-                <div class="header-button">Projetos</div>
-            </a>
-            <a href="../html/management.html">
-                <div class="header-button">Gestão</div>
-            </a>
-            <a href="../html/stories.html">
-                <div class="header-button">Histórias</div>
-            </a>
-            <a href="../html/pr.guido-history.html">
-                <div class="header-button">Sobre Pe.Guido</div>
-            </a>
-            <a href="../html/donate.html">
-                <div class="header-button donate-button">Doe Agora</div>
-            </a>
-        </div>
-    </section>
-
-
-    <section class="projects-intro">
-        <div class="projects-intro-left-div">
-            <img src="../images/projects-intro.png" alt="">
-        </div>
-
-        <div class="projects-intro-right-div">
-            <h3>Transformando Vidas<br>com Esperança</h3>
-            <p>No Projeto Esperança, acreditamos que cada gesto conta. Juntos, levamos apoio, dignidade e oportunidades
-                para aqueles que mais precisam. Venha conhecer e fazer parte dessa missão!</p>
-        </div>
-    </section>
-
-
-    <!-- Projeto 1 
-    bazar 
-    violao
-    boa idade
-    artesas 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nossos Projetos - Projeto Esperança</title>
+    <link rel="icon" href="../images/projeto_esperanca_logo.svg" />
     
-    -->
-    <section class="new-project-right">
-        <div class="right-project-left-div">
-            <img src="../images/white-heart.svg" alt="">
-            <h3>Doações de Cestas Básicas</h3>
-            <p>O projeto "Dai-lhes vós mesmos de comer" tem como
-                missão combater a fome e a insegurança alimentar através
-                da doação de cestas básicas para famílias em situação
-                de vulnerabilidade. Cada cesta é composta por alimentos
-                essenciais que garantem a nutrição adequada para as
-                famílias beneficiadas. Através da mobilização de doadores e
-                voluntários, conseguimos distribuir essas cestas
-                regularmente, proporcionando alívio imediato e dignidade
-                para aqueles que mais precisam. Este projeto é uma
-                resposta concreta à necessidade de apoio alimentar,
-                promovendo a solidariedade e a esperança em nossa
-                comunidade.</p>
-            <div class="project-specification-group">
-                <div class="right-project-specification">UERN Ação</div>
-                <div class="right-project-specification">Mesa Brasil</div>
-                <div class="right-project-specification">Prefeitura de Mossoró</div>
-                <div class="right-project-specification">Albem</div>
-            </div>
-        </div>
-        <div class="right-project-right-div">
-            <img src="../images/Projects - Doação de cestas básicas.jpg" alt="">
-        </div>
-    </section>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuração Personalizada -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#F47701',
+                        primaryDark: '#d36702',
+                        secondary: '#0AA550',
+                        dark: '#161618',
+                        light: '#F9F9FF',
+                    },
+                    fontFamily: {
+                        sans: ['DM Sans', 'sans-serif'],
+                        display: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
 
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
 
-    <!-- Projeto 2 -->
-    <section class="new-project-left">
-        <div class="left-project-left-div">
-            <img src="../images/Projects - Bazar solidário.jpg" alt="">
-        </div>
-
-        <div class="left-project-right-div">
-            <img src="../images/heart.svg" alt="">
-            <h3>Doação de Roupas</h3>
-            <p>Desde 2017, o Projeto Esperança realiza a ação “Estava Nu e Me Vestistes”, voltada para pessoas em situação de vulnerabilidade social, especialmente indivíduos em situação de rua e aqueles que procuram a instituição em busca de roupas. A iniciativa nasceu da sensibilidade diante da invisibilidade social vivida por essas pessoas, e tem como missão promover dignidade e bem-estar por meio da doação de roupas e itens essenciais.
-            Todas as peças são cuidadosamente triadas, armazenadas e registradas, garantindo transparência e organização. O projeto também contribui para a sustentabilidade, promovendo a reutilização e evitando o desperdício de roupas recebidas no Bazar Solidário.
-            </p>
-            <div class="project-specification-group">
-                <div class="left-project-specification">UERN Ação</div>
-                <div class="left-project-specification">Mesa Brasil</div>
-                <div class="left-project-specification">Prefeitura Mossoró</div>
-                <div class="left-project-specification">Albem</div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Projeto 3 -->
-    <section class="new-project-right">
-        <div class="right-project-left-div">
-            <img src="../images/white-heart.svg" alt="">
-            <h3>Almoço Solidário</h3>
-            <p>O Almoço Solidário – Barriguinha Cheia é uma ação semanal que oferece refeições nutritivas e equilibradas
-                para pessoas em situação de vulnerabilidade social. Mais do que um simples ato de alimentação, este
-                projeto busca criar um ambiente acolhedor onde os participantes podem compartilhar suas histórias e
-                construir laços de amizade. A iniciativa também inclui momentos de conversa e apoio emocional, visando a
-                construção de uma comunidade mais unida e solidária.</p>
-            <div class="project-specification-group">
-                <div class="right-project-specification">UERN Ação</div>
-                <div class="right-project-specification">Mesa Brasil</div>
-                <div class="right-project-specification">Prefeitura Mossoró</div>
-                <div class="right-project-specification">Albem</div>
-            </div>
-        </div>
-        <div class="right-project-right-div">
-            <img src="../images/Projects - Almoço solidário.jpg" alt="">
-        </div>
-    </section>
-
-
-    <!-- Projeto 4 -->
-    <section class="new-project-left">
-        <div class="left-project-left-div">
-            <img src="../images/Projects4.png" alt="">
-        </div>
-
-        <div class="left-project-right-div">
-            <img src="../images/Capoeira.png" alt="">
-            <h3>Capoeira</h3>
-            <p>O projeto "Dai-lhes vós mesmos de comer" tem como missão combater a fome e a insegurança alimentar
-                através da doação de cestas básicas para famílias em situação de vulnerabilidade. Cada cesta é composta
-                por alimentos essenciais que garantem a nutrição adequada para as famílias beneficiadas. Através da
-                mobilização de doadores e voluntários, conseguimos distribuir essas cestas regularmente, proporcionando
-                alívio imediato e dignidade para aqueles que mais precisam. Este projeto é uma resposta concreta à
-                necessidade de apoio alimentar, promovendo a solidariedade e a esperança em nossa comunidade.</p>
-            <div class="project-specification-group">
-                <div class="left-project-specification">UERN Ação</div>
-                <div class="left-project-specification">Mesa Brasil</div>
-                <div class="left-project-specification">Prefeitura Mossoró</div>
-                <div class="left-project-specification">Albem</div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Projeto 5 -->
-    <section class="new-project-right">
-        <div class="right-project-left-div">
-            <img src="../images/Violao.png" alt="">
-            <h3>Violão</h3>
-            <p>O projeto Violão proporciona aulas de música que vão além do ensino técnico do instrumento. Nossas aulas
-                são pensadas para despertar a paixão pela música, incentivando a expressão criativa e o desenvolvimento
-                artístico dos alunos. O aprendizado do violão contribui para a disciplina, a concentração e a
-                autoestima, além de ser uma excelente atividade de socialização. Realizamos apresentações e recitais
-                para que os alunos possam mostrar seu progresso e ganhar confiança.</p>
-            <div class="project-specification-group">
-                <div class="right-project-specification">UERN Ação</div>
-                <div class="right-project-specification">Mesa Brasil</div>
-                <div class="right-project-specification">Prefeitura Mossoró</div>
-                <div class="right-project-specification">Albem</div>
-            </div>
-        </div>
-        <div class="right-project-right-div">
-            <img src="../images/Projects5.png" alt="">
-        </div>
-    </section>
-
-
-    <!-- Projeto 6 -->
-    <section class="new-project-left">
-        <div class="left-project-left-div">
-            <img src="../images/Projects6.png" alt="">
-        </div>
-
-        <div class="left-project-right-div">
-            <img src="../images/heart.svg" alt="">
-            <h3>Programa Jovem Sonhador</h3>
-            <p>O Programa Jovem Sonhador é uma plataforma de capacitação para jovens que desejam ingressar no mercado
-                digital. Oferecemos cursos em áreas como programação, design gráfico, marketing digital e
-                empreendedorismo, com foco em habilidades práticas e demandadas pelo mercado.
-                <br>Além do conteúdo técnico, o programa inclui mentorias e workshops sobre desenvolvimento pessoal,
-                ajudando os jovens a construir não apenas uma carreira, mas também uma mentalidade empreendedora e
-                resiliente.
-            </p>
-            <div class="project-specification-group">
-                <div class="left-project-specification">UERN Ação</div>
-                <div class="left-project-specification">Mesa Brasil</div>
-                <div class="left-project-specification">Prefeitura Mossoró</div>
-                <div class="left-project-specification">Albem</div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Projeto 7 -->
-    <section class="new-project-right">
-        <div class="right-project-left-div">
-            <img src="../images/boa_idade.jpg" alt="">
-            <h3>Boa Idade - Terceira Idade</h3>
-            <p>O projeto Boa Idade – Terceira Idade é um espaço de convivência e aprendizado para idosos, com atividades
-                que promovem o bem-estar físico, mental e social. Oferecemos aulas de ginástica, artesanato, dança e
-                oficinas de memória, sempre com o objetivo de estimular a vitalidade e a independência dos
-                participantes. Além das atividades regulares, organizamos passeios culturais e eventos comemorativos,
-                proporcionando momentos de lazer e integração.</p>
-            <div class="project-specification-group">
-                <div class="right-project-specification">UERN Ação</div>
-                <div class="right-project-specification">Mesa Brasil</div>
-                <div class="right-project-specification">Prefeitura Mossoró</div>
-                <div class="right-project-specification">Albem</div>
-            </div>
-        </div>
-        <div class="right-project-right-div">
-            <img src="../images/Projects - Boa idade.jpg" alt="">
-        </div>
-    </section>
-
-
-    <!-- Projeto 8 -->
-    <section class="new-project-left">
-        <div class="left-project-left-div">
-            <img src="../images/Projects - Ballet.jpg" alt="">
-        </div>
-
-        <div class="left-project-right-div">
-            <img src="../images/heart.svg" alt="">
-            <h3>Ballet</h3>
-            <p>O projeto Ballet oferece aulas de dança clássica que combinam técnica, disciplina e expressão artística.
-                Com professores experientes, as aulas são estruturadas para atender desde iniciantes até alunos mais
-                avançados, proporcionando um ambiente seguro e estimulante para o desenvolvimento. O ballet não só
-                melhora a postura e a coordenação, mas também promove a autoestima e a sensibilidade artística.
-                Realizamos espetáculos anuais que permitem aos alunos demonstrar suas habilidades e compartilhar sua
-                paixão pela dança com a comunidade.</p>
-            <div class="project-specification-group">
-                <div class="left-project-specification">UERN Ação</div>
-                <div class="left-project-specification">Mesa Brasil</div>
-                <div class="left-project-specification">Prefeitura Mossoró</div>
-                <div class="left-project-specification">Albem</div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Projeto 9 -->
-    <section class="new-project-right">
-        <div class="right-project-left-div">
-            <img src="../images/Artesas_jose.jpg" alt="">
-            <h3>Artesãs de José</h3>
-            <p>O projeto Artesãs de José é dedicado a apoiar mulheres na comunidade através do artesanato. Oferecemos
-                capacitação técnica em diversas técnicas artesanais, além de suporte para a comercialização dos
-                produtos, seja em feiras locais, lojas parceiras ou plataformas online. Este projeto promove a autonomia
-                financeira das participantes, valorizando seu trabalho e contribuindo para a preservação das tradições
-                culturais. As artesãs recebem orientação sobre gestão de negócios e marketing, permitindo que
-                desenvolvam suas habilidades empreendedoras.</p>
-            <div class="project-specification-group">
-                <div class="right-project-specification">UERN Ação</div>
-                <div class="right-project-specification">Mesa Brasil</div>
-                <div class="right-project-specification">Prefeitura Mossoró</div>
-                <div class="right-project-specification">Albem</div>
-            </div>
-        </div>
-        <div class="right-project-right-div">
-            <img src="../images/Projects9.png" alt="">
-        </div>
-    </section>
-
-
-    <!-- Projeto 10 -->
-    <section class="new-project-left">
-        <div class="left-project-left-div">
-            <img src="../images/Projects10.png" alt="">
-        </div>
-
-        <div class="left-project-right-div">
-            <img src="../images/bazar_solidario.jpg" alt="">
-            <h3>Bazar Solidário</h3>
-            <p>O Bazar Solidário é uma iniciativa contínua que promove a economia circular e a sustentabilidade,
-                organizando eventos periódicos onde itens doados, como roupas, utensílios domésticos e brinquedos, são
-                vendidos a preços simbólicos. O objetivo é proporcionar uma alternativa acessível para a comunidade
-                adquirir bens essenciais, enquanto os recursos arrecadados são reinvestidos em outros projetos sociais
-                da instituição. Este bazar não só ajuda a reduzir o desperdício, mas também fortalece o senso de
-                solidariedade e cooperação dentro da comunidade</p>
-            <div class="project-specification-group">
-                <div class="left-project-specification">UERN Ação</div>
-                <div class="left-project-specification">Mesa Brasil</div>
-                <div class="left-project-specification">Prefeitura Mossoró</div>
-                <div class="left-project-specification">Albem</div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Whatsapp -->
-    <section class="wpp-contact">
-        <div class="wpp-contact-main-div">
-            <div class="wpp-contact-main-div-text">
-                <h3>Precisa de mais informação?</h3>
-                <p>Escreva para nós e responderemos o mais breve possível</p>
-            </div>
-            <a href="https://api.whatsapp.com/send?phone=5584981868964" target="_blank">
-                <div class="wpp-contact-main-div-button">
-                    Whatsapp
+    <!-- CABEÇALHO -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 h-20 flex justify-between items-center">
+            <a href="../../index.html" class="flex items-center gap-3 group">
+                <img src="../images/projeto_esperanca_logo.svg" alt="Logo" class="h-12 w-auto transition-transform group-hover:scale-105" />
+                <div class="hidden md:flex flex-col">
+                    <h1 class="text-secondary font-display font-bold text-lg leading-tight uppercase">Projeto Esperança</h1>
+                    <p class="text-dark text-xs font-medium">Pe. Guido Tonelotto</p>
                 </div>
             </a>
+
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="../../index.html" class="text-dark hover:text-primary font-bold transition-colors">Home</a>
+                <a href="./projects.html" class="text-primary font-bold transition-colors">Projetos</a>
+                <a href="./management.html" class="text-dark hover:text-primary font-bold transition-colors">Gestão</a>
+                <a href="./stories.html" class="text-dark hover:text-primary font-bold transition-colors">Histórias</a>
+                <a href="./pr.guido-history.html" class="text-dark hover:text-primary font-bold transition-colors">Sobre Pe. Guido</a>
+                <a href="./donate.html" class="bg-primary hover:bg-primaryDark text-white px-6 py-2 rounded-full font-bold shadow-lg transition-transform hover:-translate-y-0.5">Doe Agora</a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="md:hidden text-dark focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
         </div>
-    </section>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
+            <div class="flex flex-col p-4 space-y-4 font-semibold text-center">
+                <a href="../../index.html" class="text-dark hover:text-primary">Home</a>
+                <a href="./projects.html" class="text-primary">Projetos</a>
+                <a href="./management.html" class="text-dark hover:text-primary">Gestão</a>
+                <a href="./stories.html" class="text-dark hover:text-primary">Histórias</a>
+                <a href="./pr.guido-history.html" class="text-dark hover:text-primary">Sobre Pe. Guido</a>
+                <a href="./donate.html" class="bg-primary text-white py-3 rounded-xl mx-4">Doe Agora</a>
+            </div>
+        </div>
+    </header>
 
-    <!-- Rodapé -->
-    <section class="footer">
-        <!--Parte de cima do rodapé -->
-        <div class="footer-top">
+    <main class="flex-grow">
+        <!-- Intro -->
+        <section class="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <img src="../images/projects-intro.png" class="rounded-3xl shadow-2xl w-full h-auto transform hover:scale-[1.01] transition-transform" alt="Intro">
+            </div>
+            <div class="md:w-1/2 text-center md:text-left space-y-6">
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-primary leading-tight">Transformando Vidas<br><span class="text-dark">com Esperança</span></h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    No Projeto Esperança, acreditamos que cada gesto conta. Juntos, levamos apoio, dignidade e oportunidades para aqueles que mais precisam. Venha conhecer e fazer parte dessa missão!
+                </p>
+            </div>
+        </section>
 
-            <!--Informações e chamada para doação -->
-            <div class="footer-donate">
-                <div class="footer-logo"> <!--logo-->
-                    <img src="../images/projeto_esperanca_logo.svg" alt="">
-                    <div class="footer-logo-text">
-                        <h3>Projeto Esperança</h3>
-                        <p>Pe. Guildo Tonelotto</p>
+        <!-- Lista de Projetos -->
+        <div class="flex flex-col">
+            
+            <!-- 1. Cestas Básicas (Laranja) -->
+            <section class="bg-primary text-white py-20">
+                <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2 space-y-6 order-2 md:order-1">
+                        <div class="flex items-center gap-3">
+                            <img src="../images/white-heart.svg" class="w-8 h-8 opacity-90" alt="icon">
+                            <h3 class="text-3xl font-display font-bold">Doações de Cestas Básicas</h3>
+                        </div>
+                        <p class="text-orange-50 text-justify leading-relaxed">
+                            O projeto "Dai-lhes vós mesmos de comer" tem como missão combater a fome e a insegurança alimentar através da doação de cestas básicas para famílias em situação de vulnerabilidade. Cada cesta é composta por alimentos essenciais que garantem a nutrição adequada. Através da mobilização de doadores e voluntários, conseguimos distribuir essas cestas regularmente, proporcionando alívio imediato e dignidade.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-4">
+                            <span class="px-3 py-1 bg-white/20 rounded-full text-sm font-semibold">UERN Ação</span>
+                            <span class="px-3 py-1 bg-white/20 rounded-full text-sm font-semibold">Mesa Brasil</span>
+                            <span class="px-3 py-1 bg-white/20 rounded-full text-sm font-semibold">Albem</span>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 order-1 md:order-2">
+                        <img src="../images/Projects - Doação de cestas básicas.jpg" class="rounded-2xl shadow-xl w-full h-[350px] object-cover border-4 border-white/20" alt="Cestas">
                     </div>
                 </div>
-                <p>Ajude o Projeto Esperança a continuar<br>
-                    transformando vidas. Com sua doação, podemos<br>
-                    alcançar mais pessoas e levar esperança a quem<br>
-                    mais precisa.</p>
+            </section>
 
-                <a href="../html/donate.html">
-                    <div class="footer-button">Doe agora</div>
-                </a>
-            </div>
-
-            <!-- Links de Paginas -->
-            <div class="footer-links">
-                <h3>Menu</h3>
-                <a href="../../index.html">Home</a>
-                <a href="#">Projetos</a>
-                <a href="../html/stories.html">Histórias</a>
-                <a href="../html/management.html">Gestão</a>
-                <a href="../html/pr.guido-history.html">Sobre Pe.Guido</a>
-                <a href="../html/donate.html">Doe Agora</a>
-            </div>
-
-            <!--Noticias do instagram reduzidas-->
-            <div class="footer-news">
-                <h3>Siga-nos no Instagram</h3>
-                <div class="footer-news-group">
-
-                    <!-- Primeira Linha -->
-                    <div class="footer-news-row">
-
-                        <!--Noticia Topo Esquerda-->
-                        <div class="footer-news-card">
-                            <a href="https://www.instagram.com/projetoesperanca_/" target="_blank">
-                                <img src="../images/footer1.png" alt="">
-                            </a>
+            <!-- 2. Roupas (Branco) -->
+            <section class="bg-white text-dark py-20">
+                <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="../images/Projects - Bazar solidário.jpg" class="rounded-2xl shadow-xl w-full h-[350px] object-cover" alt="Roupas">
+                    </div>
+                    <div class="md:w-1/2 space-y-6">
+                        <div class="flex items-center gap-3">
+                            <img src="../images/heart.svg" class="w-8 h-8 text-primary" alt="icon">
+                            <h3 class="text-3xl font-display font-bold">Doação de Roupas</h3>
                         </div>
-
-                        <!--Noticia Topo Direita-->
-                        <div class="footer-news-card">
-                            <a href="https://www.instagram.com/projetoesperanca_/" target="_blank">
-                                <img src="../images/footer2.png" alt="">
-                            </a>
+                        <p class="text-gray-600 text-justify leading-relaxed">
+                            Desde 2017, o Projeto Esperança realiza a ação “Estava Nu e Me Vestistes”, voltada para pessoas em situação de vulnerabilidade social. A iniciativa nasceu da sensibilidade diante da invisibilidade social vivida por essas pessoas, e tem como missão promover dignidade e bem-estar por meio da doação de roupas e itens essenciais. Todas as peças são cuidadosamente triadas, armazenadas e registradas.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-4">
+                            <span class="px-3 py-1 bg-gray-100 text-primary rounded-full text-sm font-bold border border-primary/20">Sustentabilidade</span>
+                            <span class="px-3 py-1 bg-gray-100 text-primary rounded-full text-sm font-bold border border-primary/20">Dignidade</span>
                         </div>
                     </div>
+                </div>
+            </section>
 
-                    <!-- Segunda Linha -->
-                    <div class="footer-news-row">
-
-                        <!--Noticia Fundo Esquerda-->
-                        <div class="footer-news-card">
-                            <a href="https://www.instagram.com/projetoesperanca_/" target="_blank">
-                                <img src="../images/footer3.png" alt="">
-                            </a>
+            <!-- 3. Almoço Solidário (Laranja) -->
+            <section class="bg-primary text-white py-20">
+                <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2 space-y-6 order-2 md:order-1">
+                        <div class="flex items-center gap-3">
+                            <img src="../images/white-heart.svg" class="w-8 h-8 opacity-90" alt="icon">
+                            <h3 class="text-3xl font-display font-bold">Almoço Solidário</h3>
                         </div>
+                        <p class="text-orange-50 text-justify leading-relaxed">
+                            O Almoço Solidário – Barriguinha Cheia é uma ação semanal que oferece refeições nutritivas e equilibradas para pessoas em situação de vulnerabilidade social. Mais do que um simples ato de alimentação, este projeto busca criar um ambiente acolhedor onde os participantes podem compartilhar suas histórias e construir laços de amizade.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 order-1 md:order-2">
+                        <img src="../images/Projects - Almoço solidário.jpg" class="rounded-2xl shadow-xl w-full h-[350px] object-cover border-4 border-white/20" alt="Almoço">
+                    </div>
+                </div>
+            </section>
 
-
-                        <!--Noticia Fundo Direita-->
-                        <div class="footer-news-card">
-                            <a href="https://www.instagram.com/projetoesperanca_/" target="_blank">
-                                <img src="../images/footer4.png" alt="">
-                            </a>
+            <!-- 4. Capoeira (Branco) -->
+            <section class="bg-white text-dark py-20">
+                <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="../images/Projects4.png" class="rounded-2xl shadow-xl w-full h-[350px] object-cover" alt="Capoeira">
+                    </div>
+                    <div class="md:w-1/2 space-y-6">
+                        <div class="flex items-center gap-3">
+                            <img src="../images/Capoeira.png" class="w-12 h-12 object-contain" alt="icon">
+                            <h3 class="text-3xl font-display font-bold">Capoeira</h3>
                         </div>
+                        <p class="text-gray-600 text-justify leading-relaxed">
+                            Promovemos aulas de capoeira como ferramenta de inclusão social, disciplina e valorização da cultura brasileira. As atividades físicas ajudam no desenvolvimento motor e cognitivo de crianças e adolescentes, além de fomentar o respeito mútuo e a cooperação dentro da comunidade.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-4">
+                            <span class="px-3 py-1 bg-gray-100 text-primary rounded-full text-sm font-bold border border-primary/20">Esporte</span>
+                            <span class="px-3 py-1 bg-gray-100 text-primary rounded-full text-sm font-bold border border-primary/20">Cultura</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
+            <!-- 5. Violão (Laranja) -->
+            <section class="bg-primary text-white py-20">
+                <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2 space-y-6 order-2 md:order-1">
+                        <div class="flex items-center gap-3">
+                            <img src="../images/Violao.png" class="w-12 h-12 object-contain bg-white rounded-full p-1" alt="icon">
+                            <h3 class="text-3xl font-display font-bold">Violão</h3>
+                        </div>
+                        <p class="text-orange-50 text-justify leading-relaxed">
+                            O projeto Violão proporciona aulas de música que vão além do ensino técnico. Nossas aulas despertam a paixão pela música, incentivando a expressão criativa. O aprendizado do violão contribui para a disciplina, concentração e autoestima. Realizamos apresentações e recitais para que os alunos mostrem seu progresso.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 order-1 md:order-2">
+                        <img src="../images/Projects5.png" class="rounded-2xl shadow-xl w-full h-[350px] object-cover border-4 border-white/20" alt="Violão">
+                    </div>
+                </div>
+            </section>
 
+            <!-- 6. Jovem Sonhador (Branco) -->
+            <section class="bg-white text-dark py-20">
+                <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="../images/Projects6.png" class="rounded-2xl shadow-xl w-full h-[350px] object-cover" alt="Jovem Sonhador">
+                    </div>
+                    <div class="md:w-1/2 space-y-6">
+                        <div class="flex items-center gap-3">
+                            <img src="../images/heart.svg" class="w-8 h-8 text-primary" alt="icon">
+                            <h3 class="text-3xl font-display font-bold">Programa Jovem Sonhador</h3>
+                        </div>
+                        <p class="text-gray-600 text-justify leading-relaxed">
+                            O Programa Jovem Sonhador é uma plataforma de capacitação para jovens que desejam ingressar no mercado digital. Oferecemos cursos em áreas como programação, design gráfico e marketing, focando em habilidades práticas. Inclui mentorias sobre desenvolvimento pessoal e empreendedorismo.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-4">
+                            <span class="px-3 py-1 bg-gray-100 text-primary rounded-full text-sm font-bold border border-primary/20">Educação</span>
+                            <span class="px-3 py-1 bg-gray-100 text-primary rounded-full text-sm font-bold border border-primary/20">Tecnologia</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. Boa Idade (Laranja) -->
+            <section class="bg-primary text-white py-20">
+                <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2 space-y-6 order-2 md:order-1">
+                        <div class="flex items-center gap-3">
+                            <img src="../images/boa_idade.jpg" class="w-12 h-12 object-contain rounded-full border-2 border-white" alt="icon">
+                            <h3 class="text-3xl font-display font-bold">Boa Idade</h3>
+                        </div>
+                        <p class="text-orange-50 text-justify leading-relaxed">
+                            O projeto Boa Idade é um espaço de convivência e aprendizado para idosos, com atividades que promovem o bem-estar físico, mental e social. Oferecemos aulas de ginástica, artesanato, dança e oficinas de memória, estimulando a vitalidade e a independência dos participantes.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 order-1 md:order-2">
+                        <img src="../images/Projects - Boa idade.jpg" class="rounded-2xl shadow-xl w-full h-[350px] object-cover border-4 border-white/20" alt="Boa Idade">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. Ballet (Branco) -->
+            <section class="bg-white text-dark py-20">
+                <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="../images/Projects - Ballet.jpg" class="rounded-2xl shadow-xl w-full h-[350px] object-cover" alt="Ballet">
+                    </div>
+                    <div class="md:w-1/2 space-y-6">
+                        <div class="flex items-center gap-3">
+                            <img src="../images/heart.svg" class="w-8 h-8 text-primary" alt="icon">
+                            <h3 class="text-3xl font-display font-bold">Ballet</h3>
+                        </div>
+                        <p class="text-gray-600 text-justify leading-relaxed">
+                            O projeto Ballet oferece aulas de dança clássica que combinam técnica, disciplina e expressão artística. O ballet melhora a postura, a coordenação e promove a autoestima. Realizamos espetáculos anuais que permitem aos alunos demonstrar suas habilidades para a comunidade.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 9. Artesãs (Laranja) -->
+            <section class="bg-primary text-white py-20">
+                <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2 space-y-6 order-2 md:order-1">
+                        <div class="flex items-center gap-3">
+                            <img src="../images/Artesas_jose.jpg" class="w-12 h-12 object-contain rounded-full border-2 border-white" alt="icon">
+                            <h3 class="text-3xl font-display font-bold">Artesãs de José</h3>
+                        </div>
+                        <p class="text-orange-50 text-justify leading-relaxed">
+                            Dedicado a apoiar mulheres através do artesanato. Oferecemos capacitação técnica e suporte para comercialização dos produtos. Este projeto promove a autonomia financeira das participantes, valorizando seu trabalho e contribuindo para a preservação das tradições culturais.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 order-1 md:order-2">
+                        <img src="../images/Projects9.png" class="rounded-2xl shadow-xl w-full h-[350px] object-cover border-4 border-white/20" alt="Artesãs">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 10. Bazar Solidário (Branco) -->
+            <section class="bg-white text-dark py-20">
+                <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="../images/Projects10.png" class="rounded-2xl shadow-xl w-full h-[350px] object-cover" alt="Bazar">
+                    </div>
+                    <div class="md:w-1/2 space-y-6">
+                        <div class="flex items-center gap-3">
+                            <img src="../images/bazar_solidario.jpg" class="w-12 h-12 object-contain rounded-full" alt="icon">
+                            <h3 class="text-3xl font-display font-bold">Bazar Solidário</h3>
+                        </div>
+                        <p class="text-gray-600 text-justify leading-relaxed">
+                            O Bazar Solidário promove a economia circular, vendendo itens doados a preços simbólicos. O objetivo é proporcionar acesso a bens essenciais para a comunidade, enquanto os recursos arrecadados são reinvestidos nos projetos sociais da instituição.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-4">
+                            <span class="px-3 py-1 bg-gray-100 text-primary rounded-full text-sm font-bold border border-primary/20">Solidariedade</span>
+                            <span class="px-3 py-1 bg-gray-100 text-primary rounded-full text-sm font-bold border border-primary/20">Economia Circular</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-white border-t-4 border-primary pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div class="flex flex-col items-center md:items-start text-center md:text-left space-y-6">
+                    <div class="flex items-center gap-3">
+                        <img src="../images/projeto_esperanca_logo.svg" alt="Logo" class="w-16 h-auto">
+                        <div>
+                            <h3 class="text-xl font-bold text-secondary uppercase">Projeto Esperança</h3>
+                            <p class="text-sm text-gray-500">Pe. Guildo Tonelotto</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 max-w-sm">Ajude o Projeto Esperança a continuar transformando vidas.</p>
+                    <a href="./donate.html" class="bg-primary hover:bg-primaryDark text-white font-bold py-3 px-8 rounded-full shadow-md transition-colors">Quero Doar</a>
+                </div>
+                <div class="flex flex-col items-center">
+                    <h3 class="text-dark font-bold text-lg mb-6 border-b-2 border-primary pb-2">Menu</h3>
+                    <ul class="space-y-3 text-center">
+                        <li><a href="../../index.html" class="text-gray-600 hover:text-primary">Home</a></li>
+                        <li><a href="./projects.html" class="text-primary font-bold">Projetos</a></li>
+                        <li><a href="./stories.html" class="text-gray-600 hover:text-primary">Histórias</a></li>
+                        <li><a href="./management.html" class="text-gray-600 hover:text-primary">Gestão</a></li>
+                        <li><a href="./donate.html" class="text-gray-600 hover:text-primary">Doe Agora</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col items-center">
+                    <h3 class="text-dark font-bold text-lg mb-6 border-b-2 border-primary pb-2">Redes Sociais</h3>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/projetoesperanca_/" target="_blank"><img src="../images/svg-instagram.svg" class="w-8 h-8"></a>
+                        <a href="https://www.youtube.com/@projetoesperanca6744" target="_blank"><img src="../images/svg-youtube.svg" class="w-8 h-8"></a>
                     </div>
                 </div>
             </div>
-        </div>
-
-
-        <div class="footer-line"></div>
-
-        <!--Parte de baixo do Rodape-->
-        <div class="footer-bottom">
-            <p>Copyright © 2024 Projeto Esperança</p>
-
-            <!--Icones de redes sociais -->
-            <div class="footer-bottom-icon-links">
-                
-                <a href="https://www.instagram.com/projetoesperanca_/" target="_blank"><img src="../images/svg-instagram.svg" alt=""></a>
-                <a href="https://www.youtube.com/@projetoesperanca6744" target="_blank"><img src="../images/svg-youtube.svg" alt=""></a>
+            <div class="border-t border-gray-200 pt-8 text-center">
+                <p class="text-gray-500 text-sm">© 2024 Projeto Esperança. Todos os direitos reservados.</p>
             </div>
         </div>
-    </section>
+    </footer>
 
+    <!-- Script Menu Mobile -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
 </body>
-
 </html>
-
-<!-- Padrão de Projetos com imagem a direita -->
-<!--
-        <section class="new-project-right">
-            <div class="right-project-left-div">
-                <img src="" alt="">
-                <h3></h3>
-                <p></p>
-                <div class="project-specification-group">
-                    <div class="project-specification"> </div>
-                </div>
-            </div>
-            <div class="right-project-right-div">
-                <img src="" alt="">
-            </div>
-        </section>
-      -->
-
-
-
-<!-- Padrão de Projetos com imagem a esquerda -->
-<!--
-        <section class="new-project-left">
-            <div class="left-project-left-div">
-                <img src="" alt="">
-            </div>
-
-            <div class="left-project-right-div">
-                <img src="" alt="">
-                <h3></h3>
-                <p></p>
-                <div class="project-specification-group">
-                    <div class="left-project-specification"> </div>
-                </div>
-            </div>
-        </section>
-     -->

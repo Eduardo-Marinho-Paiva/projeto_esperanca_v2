@@ -1,188 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doar Roupas</title>
-    <link rel="stylesheet" href="../css/basic.css">
-    <link rel="stylesheet" href="../css/cloath.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/wpp-contact.css">
-    <link rel="icon" href="../images/projeto_esperanca_logo.svg">
-    <script src="../js/header_mobile.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doar Roupas - Projeto Esperança</title>
+    <link rel="icon" href="../images/projeto_esperanca_logo.svg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#F47701', dark: '#161618' }, fontFamily: { display: ['Poppins', 'sans-serif'] } } } }</script>
 </head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
 
-<body>
+    <header class="bg-white shadow-sm p-4 text-center sticky top-0 z-50">
+        <a href="donate.html" class="text-primary font-bold hover:underline flex items-center justify-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            Voltar para Doações
+        </a>
+    </header>
 
-    <!-- Cabeçalho -->
-    <section class="header">
-        <div class="header-logo"> <!--logo-->
-            <a href ="../../index.html" target="_blank"><img src="../images/projeto_esperanca_logo.svg" alt=""></a>
-            <div class="header-logo-text">
-                <h3>Projeto Esperança</h3>
-                <p>Pe. Guildo Tonelotto</p>
+    <main class="flex-grow flex items-center justify-center py-12 px-4">
+        <div class="bg-white rounded-3xl shadow-xl max-w-2xl w-full p-8 md:p-12 text-center border-t-8 border-primary">
+            <img src="../images/ROUPAS.png" class="w-24 h-24 mx-auto mb-6 bg-orange-50 rounded-full p-4" alt="Roupas">
+            
+            <h2 class="text-3xl md:text-4xl font-display font-bold text-dark mb-8">Ponto de Coleta</h2>
+            
+            <div class="bg-gray-50 rounded-2xl p-8 mb-8 text-left border border-gray-200">
+                <h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    Endereço
+                </h3>
+                <p class="text-gray-700 mb-2 font-bold">Projeto Esperança Pe. Guido Tonelloto</p>
+                <p class="text-gray-600 mb-4">R. Venceslau Braz, 415 - Barrocas, Mossoró-RN</p>
+                <div class="h-px bg-gray-200 my-4"></div>
+                <h3 class="text-xl font-bold text-primary mb-2 flex items-center gap-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Horário de Recebimento
+                </h3>
+                <p class="text-gray-600">Segunda a Sexta: 10:00 às 22:00</p>
+                <p class="text-gray-600">Domingo: 12:00 às 20:00</p>
             </div>
-            <a href="#" class="icone_menu">
-                <div id="icm" class="header-button">
-                    ☰
-                </div>
+
+            <a href="https://www.google.com/maps/place/Projeto+Esperan%C3%A7a+Pe.+Guido+Tonelloto/@-5.1859723,-37.3374822,17z/data=!4m15!1m8!3m7!1s0x7ba0766e3c79885:0x9fa38b6ee7239241!2sProjeto+Esperan%C3%A7a+Pe.+Guido+Tonelloto!8m2!3d-5.1859006!4d-37.3375408!10e5!16s%2Fg%2F11svdb34xl!3m5!1s0x7ba0766e3c79885:0x9fa38b6ee7239241!8m2!3d-5.1859006!4d-37.3375408!16s%2Fg%2F11svdb34xl?entry=ttu&g_ep=EgoyMDI1MDYxNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="inline-flex items-center gap-2 bg-primary hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-colors w-full md:w-auto justify-center">
+                Abrir no Google Maps
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
             </a>
         </div>
+    </main>
 
-        <div class="header-button-group"> <!-- botões -->
-            <a href="../../index.html">
-                <div class="header-button">Home</div>
-            </a>
-            <a href="../html/projects.html">
-                <div class="header-button">Projetos</div>
-            </a>
-            <a href="../html/management.html">
-                <div class="header-button">Gestão</div>
-            </a>
-            <a href="../html/stories.html">
-                <div class="header-button">Histórias</div>
-            </a>
-            <a href="../html/pr.guido-history.html">
-                <div class="header-button">Sobre Pe.Guido</div>
-            </a>
-            <a href="../html/donate.html">
-                <div class="header-button donate-button">Doe Agora</div>
-            </a>
-        </div>
-    </section>
-
-    <!-- Ponto de Coleta -->
-    <section class="collection-point">
-        <h3 id="methods">Método de doação</h3>
-        <h3>Doação de Roupas</h3>
-        <div class="collection-point-info">
-            <h3>Pontos de Doação</h3>
-            <div class="collection-point-info-card">
-                <p>Cidade: Mossoró-RN<br>
-                    Local: Projeto Esperança Pe.Guido Tonelloto<br>
-                    Endereço: R. Venceslau Braz, 415 - Barrocas<br>
-                    Horário: Das 10:00 as 22:00 - Segunda a Sexta / Das 12:00 as 20:00 - Domingo</p> 
-                <a href="https://www.google.com/maps/place/Projeto+Esperan%C3%A7a+Pe.+Guido+Tonelloto/@-5.1859723,-37.3374822,17z/data=!4m15!1m8!3m7!1s0x7ba0766e3c79885:0x9fa38b6ee7239241!2sProjeto+Esperan%C3%A7a+Pe.+Guido+Tonelloto!8m2!3d-5.1859006!4d-37.3375408!10e5!16s%2Fg%2F11svdb34xl!3m5!1s0x7ba0766e3c79885:0x9fa38b6ee7239241!8m2!3d-5.1859006!4d-37.3375408!16s%2Fg%2F11svdb34xl?entry=ttu&g_ep=EgoyMDI1MDYxNy4wIKXMDSoASAFQAw%3D%3D"
-                    class="collection-point-button">Abrir no Google Maps</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Whatsapp -->
-    <section class="wpp-contact">
-        <div class="wpp-contact-main-div">
-            <div class="wpp-contact-main-div-text">
-                <h3>Precisa de mais informação?</h3>
-                <p>Escreva para nós e responderemos o mais breve possível</p>
-            </div>
-            <a href="https://api.whatsapp.com/send?phone=5584981868964" target="_blank">
-                <div class="wpp-contact-main-div-button">
-                    Whatsapp
-                </div>
-            </a>
-        </div>
-    </section>
-
-    <!-- Rodapé -->
-    <section class="footer">
-        <!--Parte de cima do rodapé -->
-        <div class="footer-top">
-
-            <!--Informações e chamada para doação -->
-            <div class="footer-donate">
-                <div class="footer-logo"> <!--logo-->
-                    <img src="../images/projeto_esperanca_logo.svg" alt="">
-                    <div class="footer-logo-text">
-                        <h3>Projeto Esperança</h3>
-                        <p>Pe. Guildo Tonelotto</p>
-                    </div>
-                </div>
-                <p>Ajude o Projeto Esperança a continuar<br>
-                    transformando vidas. Com sua doação, podemos<br>
-                    alcançar mais pessoas e levar esperança a quem<br>
-                    mais precisa.</p>
-
-                <a href="../html/donate.html">
-                    <div class="footer-button">Doe agora</div>
-                </a>
-            </div>
-
-            <!-- Links de Paginas -->
-            <div class="footer-links">
-                <h3>Menu</h3>
-                <a href="../../index.html">Home</a>
-                <a href="../html/projects.html">Projetos</a>
-                <a href="../html/stories.html">Histórias</a>
-                <a href="../html/management.html">Gestão</a>
-                <a href="../html/pr.guido-history.html">Sobre Pe.Guido</a>
-                <a href="../html/donate.html">Doe Agora</a>
-            </div>
-
-            <!--Noticias do instagram reduzidas-->
-            <div class="footer-news">
-                <h3>Siga-nos no Instagram</h3>
-                <div class="footer-news-group">
-
-                    <!-- Primeira Linha -->
-                    <div class="footer-news-row">
-
-                        <!--Noticia Topo Esquerda-->
-                        <div class="footer-news-card">
-                            <a href="https://www.instagram.com/projetoesperanca_/" target="_blank">
-                                <img src="../images/footer1.png" alt="">
-                            </a>
-                        </div>
-
-                        <!--Noticia Topo Direita-->
-                        <div class="footer-news-card">
-                            <a href="https://www.instagram.com/projetoesperanca_/" target="_blank">
-                                <img src="../images/footer2.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Segunda Linha -->
-                    <div class="footer-news-row">
-
-                        <!--Noticia Fundo Esquerda-->
-                        <div class="footer-news-card">
-                            <a href="https://www.instagram.com/projetoesperanca_/" target="_blank">
-                                <img src="../images/footer3.png" alt="">
-                            </a>
-                        </div>
-
-
-                        <!--Noticia Fundo Direita-->
-                        <div class="footer-news-card">
-                            <a href="https://www.instagram.com/projetoesperanca_/" target="_blank">
-                                <img src="../images/footer4.png" alt="">
-                            </a>
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="footer-line"></div>
-
-        <!--Parte de baixo do Rodape-->
-        <div class="footer-bottom">
-            <p>Copyright © 2024 Projeto Esperança</p>
-
-            <!--Icones de redes sociais -->
-            <div class="footer-bottom-icon-links">
-                
-                <a href="https://www.instagram.com/projetoesperanca_/" target="_blank"><img src="../images/svg-instagram.svg" alt=""></a>
-                <a href="https://www.youtube.com/@projetoesperanca6744" target="_blank"><img src="../images/svg-youtube.svg" alt=""></a>
-            </div>
-        </div>
-    </section>
-
+    <footer class="bg-white border-t border-gray-200 py-6 text-center">
+        <p class="text-gray-500 text-sm">© 2024 Projeto Esperança</p>
+    </footer>
 </body>
-
 </html>
