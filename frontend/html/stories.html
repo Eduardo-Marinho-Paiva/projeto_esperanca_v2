@@ -29,11 +29,11 @@
 </head>
 <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
 
-    <!-- Header (Padrão) -->
+    <!-- Header (Padrão da Versão 2) -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 h-20 flex justify-between items-center">
             <a href="../../index.html" class="flex items-center gap-3">
-                <img src="../images/projeto_esperanca_logo.svg" alt="Logo" class="h-12 w-auto" />
+                <img src="../images/projeto_esperanca_logo.svg" alt="Logo" class="h-12 w-auto" onerror="this.src='https://placehold.co/100x40?text=Logo'" />
                 <div class="hidden md:flex flex-col">
                     <h1 class="text-secondary font-display font-bold text-lg uppercase">Projeto Esperança</h1>
                     <p class="text-dark text-xs font-medium">Pe. Guido Tonelotto</p>
@@ -66,73 +66,84 @@
             <p class="text-lg text-gray-600 max-w-2xl mx-auto">Relatos emocionantes de quem teve a vida transformada pelo Projeto Esperança.</p>
         </div>
 
-        <div class="container mx-auto px-4 space-y-12">
-            
-            <!-- Card 1 -->
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row hover:shadow-2xl transition-shadow duration-300">
-                <div class="md:w-1/2 aspect-video bg-black">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/zPrlmCw3n_Q?si=XdPlmExDuZ9Ueoy2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-                <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-                    <h3 class="text-2xl font-bold text-primary mb-4 font-display">Nilton César</h3>
-                    <p class="text-gray-600 leading-relaxed text-justify">
-                        Nilton relembra uma trajetória marcada por fé, música e amizade. Ele conta como, ainda adolescente, entrou para o grupo de acólitos e recebeu conselhos que moldaram sua vida. A convivência com o Padre Guido foi crescendo até se tornar quase como de pai e filho. A música o levou a tocar missas e seguir carreira.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row-reverse hover:shadow-2xl transition-shadow duration-300">
-                <div class="md:w-1/2 aspect-video bg-black">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/paqulA2nL68?si=xYailMerFf8b_Neq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-                <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-                    <h3 class="text-2xl font-bold text-primary mb-4 font-display">Elias Francisco</h3>
-                    <p class="text-gray-600 leading-relaxed text-justify">
-                        Elias conheceu o projeto quando ainda era apenas um sonho no coração do Padre Guido, funcionando com o grupo "Pequenos Vendedores". Anos depois, voltou como voluntário, sentindo no coração que devia retribuir tudo que o projeto lhe deu em formação e educação. Hoje coordena o grupo "Esperança Viva".
-                    </p>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row hover:shadow-2xl transition-shadow duration-300">
-                <div class="md:w-1/2 aspect-video bg-black">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/DeANrALncRI?si=HeY4YfADhQVR2Xby" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-                <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-                    <h3 class="text-2xl font-bold text-primary mb-4 font-display">Francisco Sérgio</h3>
-                    <p class="text-gray-600 leading-relaxed text-justify">
-                        Sérgio entrou no projeto em 1985. Começou como coroinha e viu o projeto crescer. Ele destaca que o maior legado é a educação, formando profissionais que hoje são médicos e líderes. Sérgio batizou seu filho com ajuda do Padre Guido e hoje vê os frutos dessa longa caminhada.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row-reverse hover:shadow-2xl transition-shadow duration-300">
-                <div class="md:w-1/2 aspect-video bg-black">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/ZEgjuBqNjmE?si=bEPR13m4N4nCvhUK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-                <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-                    <h3 class="text-2xl font-bold text-primary mb-4 font-display">Francisco Canindé</h3>
-                    <p class="text-gray-600 leading-relaxed text-justify">
-                        Em 1981, com apenas 11 anos, trabalhava lavando carros quando foi convidado para o projeto. As atividades lhe deram valores que o marcaram para sempre, como a lição: "Menino tem que ser do bem." Apesar de uma infância difícil, a orientação recebida o ajudou a se tornar um cidadão de bem.
-                    </p>
-                </div>
-            </div>
-
+        <!-- Container para inserção dinâmica (ID adicionado para a lógica V1, Classes da V2) -->
+        <div id="stories-list" class="container mx-auto px-4 space-y-12">
+            <!-- Loader inicial opcional -->
+            <p class="text-center text-gray-500">Carregando histórias...</p>
         </div>
     </main>
 
-    <!-- Footer Padrão -->
+    <!-- Footer Padrão (Versão 2) -->
     <footer class="bg-white border-t-4 border-primary pt-16 pb-8">
         <div class="container mx-auto px-4 text-center">
             <p class="text-gray-500 text-sm">© 2024 Projeto Esperança. Todos os direitos reservados.</p>
         </div>
     </footer>
 
+    <!-- Script de funcionalidade do Menu Mobile (Versão 2) -->
     <script>
         document.getElementById('mobile-menu-btn').addEventListener('click', () => {
             document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- Importação da API (Versão 1) -->
+    <script src="../js/api.js"></script>
+    
+    <!-- Lógica de Povoamento (Adaptada da Versão 1 para Formatação da Versão 2) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            // Verifica se a API está disponível, caso contrário usa dados mockados para demonstração
+            if (!window.api) {
+                console.warn('API não encontrada. Usando dados de exemplo para visualização.');
+                window.api = {
+                    fetchContent: async () => [
+                        { title: 'Nilton César', description: 'Nilton relembra uma trajetória marcada por fé, música e amizade...', videoUrl: 'https://www.youtube.com/watch?v=zPrlmCw3n_Q' },
+                        { title: 'Elias Francisco', description: 'Elias conheceu o projeto quando ainda era apenas um sonho no coração do Padre Guido...', videoUrl: 'https://www.youtube.com/watch?v=paqulA2nL68' },
+                        { title: 'Francisco Sérgio', description: 'Sérgio entrou no projeto em 1985. Começou como coroinha e viu o projeto crescer...', videoUrl: 'https://www.youtube.com/watch?v=DeANrALncRI' }
+                    ],
+                    getYoutubeEmbedUrl: (url) => {
+                        const videoId = url.split('v=')[1] || url.split('/').pop();
+                        return `https://www.youtube.com/embed/${videoId}`;
+                    }
+                };
+            }
+
+            const stories = await window.api.fetchContent('stories');
+            const container = document.getElementById('stories-list');
+            
+            // Limpa o loader
+            container.innerHTML = '';
+
+            if(stories.length === 0) {
+                container.innerHTML = '<p class="text-center text-gray-600 text-lg">Nenhuma história no momento.</p>';
+                return;
+            }
+
+            stories.forEach((st, index) => {
+                const isEven = index % 2 === 0;
+                const embed = window.api.getYoutubeEmbedUrl(st.videoUrl);
+                
+                // Mapeamento da lógica de alternância (V1) para as classes visuais da V2
+                // Versão 2 usa md:flex-row para imagem à esquerda e md:flex-row-reverse para imagem à direita
+                const directionClass = isEven ? 'md:flex-row' : 'md:flex-row-reverse';
+
+                // Template String com a estrutura exata da Versão 2
+                const html = `
+                    <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col ${directionClass} hover:shadow-2xl transition-shadow duration-300">
+                        <div class="md:w-1/2 aspect-video bg-black">
+                            <iframe class="w-full h-full" src="${embed}" title="${st.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                            <h3 class="text-2xl font-bold text-primary mb-4 font-display">${st.title}</h3>
+                            <p class="text-gray-600 leading-relaxed text-justify">
+                                ${st.description}
+                            </p>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += html;
+            });
         });
     </script>
 </body>

@@ -94,193 +94,24 @@
 
         <div class="container mx-auto px-4 py-16 space-y-20">
 
-            <!-- Coordenação -->
+            <!-- Gestão Eclesiástica -->
             <section>
                 <div class="flex items-center gap-4 mb-10">
                     <div class="h-10 w-2 bg-primary rounded-full"></div>
-                    <h3 class="text-3xl font-display font-bold text-dark">Coordenação Geral</h3>
+                    <h3 class="text-3xl font-display font-bold text-dark">Gestão Eclesiástica</h3>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
-                        <div class="h-64 overflow-hidden relative bg-gray-200">
-                            <img src="../images/Gestão/1ª Secretária.jpeg"
-                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                                alt="1ª Secretária">
-                        </div>
-                        <div class="p-5 border-b-4 border-primary">
-                            <h4 class="font-bold text-lg text-dark leading-tight">Lígia Maria B. Guerra</h4>
-                            <p class="text-primary font-bold text-sm uppercase mt-1">Coordenadora Geral</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Gestão Eclesiástica -->
-            <div class="flex items-center gap-4 mb-10">
-                <div class="h-10 w-2 bg-primary rounded-full"></div>
-                <h3 class="text-3xl font-display font-bold text-dark">Gestão Eclesiástica - 2024</h3>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                <!-- Card 1 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
-                    <div class="h-64 overflow-hidden relative bg-gray-100 flex items-center justify-center">
-                        <!-- Placeholder Image SVG -->
-                        <svg class="w-20 h-20 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                        </svg>
-                    </div>
-                    <div class="p-5 border-b-4 border-primary">
-                        <h4 class="font-bold text-lg text-dark leading-tight">Dom Mariano</h4>
-                        <p class="text-primary font-bold text-sm uppercase mt-1">Bispo da Diocese</p>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
-                    <div class="h-64 overflow-hidden relative bg-gray-100 flex items-center justify-center">
-                        <!-- Placeholder Image SVG -->
-                        <svg class="w-20 h-20 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                        </svg>
-                    </div>
-                    <div class="p-5 border-b-4 border-primary">
-                        <h4 class="font-bold text-lg text-dark leading-tight">Pe. José Ribeiro</h4>
-                        <p class="text-primary font-bold text-sm uppercase mt-1">Administrador Paroquial de São José</p>
-                    </div>
-                </div>
-            </div>
+                <!-- Container Dinâmico -->
+                <div id="ecles-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"></div>
             </section>
 
             <!-- Conselho -->
             <section>
                 <div class="flex items-center gap-4 mb-10">
                     <div class="h-10 w-2 bg-primary rounded-full"></div>
-                    <h3 class="text-3xl font-display font-bold text-dark">Conselho (Triênio 2022-2025)</h3>
+                    <h3 class="text-3xl font-display font-bold text-dark">Conselho (Triênio 2024 - 2025)</h3>
                 </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-
-                    <!-- Card Membro 1 -->
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
-                        <div class="h-64 overflow-hidden relative bg-gray-200">
-                            <img src="../images/Gestão/Presidente.jpeg"
-                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                                alt="Presidente">
-                        </div>
-                        <div class="p-5 border-b-4 border-primary">
-                            <h4 class="font-bold text-lg text-dark leading-tight">Pe. Francisco Crisanto</h4>
-                            <p class="text-primary font-bold text-sm uppercase mt-1">Presidente</p>
-                        </div>
-                    </div>
-
-                    <!-- Card Membro 2 (Placeholder para Vice) -->
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
-                        <div class="h-64 overflow-hidden relative bg-gray-100 flex items-center justify-center">
-                            <svg class="w-20 h-20 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                            </svg>
-                        </div>
-                        <div class="p-5 border-b-4 border-secondary">
-                            <h4 class="font-bold text-lg text-dark leading-tight">Pe. José Alves Paiva Jr.</h4>
-                            <p class="text-secondary font-bold text-sm uppercase mt-1">Vice Presidente</p>
-                        </div>
-                    </div>
-
-                    <!-- Card Membro 3 -->
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
-                        <div class="h-64 overflow-hidden relative bg-gray-200">
-                            <img src="../images/Gestão/1ª Secretária.jpeg"
-                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                                alt="1ª Secretária">
-                        </div>
-                        <div class="p-5 border-b-4 border-primary">
-                            <h4 class="font-bold text-lg text-dark leading-tight">Lígia Maria B. Guerra</h4>
-                            <p class="text-primary font-bold text-sm uppercase mt-1">1ª Secretária</p>
-                        </div>
-                    </div>
-
-                    <!-- Card Membro 4 -->
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
-                        <div class="h-64 overflow-hidden relative bg-gray-200">
-                            <img src="../images/Gestão/2ª Secretária.jpeg"
-                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                                alt="2ª Secretária">
-                        </div>
-                        <div class="p-5 border-b-4 border-secondary">
-                            <h4 class="font-bold text-lg text-dark leading-tight">Maria das Dores Soares</h4>
-                            <p class="text-secondary font-bold text-sm uppercase mt-1">2ª Secretária</p>
-                        </div>
-                    </div>
-
-                    <!-- Card Membro 5 -->
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
-                        <div class="h-64 overflow-hidden relative bg-gray-200">
-                            <img src="../images/Gestão/Tesoureiro.jpeg"
-                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                                alt="Tesoureiro">
-                        </div>
-                        <div class="p-5 border-b-4 border-primary">
-                            <h4 class="font-bold text-lg text-dark leading-tight">Raimundo Ewerthon</h4>
-                            <p class="text-primary font-bold text-sm uppercase mt-1">Tesoureiro</p>
-                        </div>
-                    </div>
-
-                    <!-- Card Membro 6 -->
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
-                        <div class="h-64 overflow-hidden relative bg-gray-200">
-                            <img src="../images/Gestão/Fiscal titular.jpeg"
-                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                                alt="Fiscal">
-                        </div>
-                        <div class="p-5 border-b-4 border-secondary">
-                            <h4 class="font-bold text-lg text-dark leading-tight">Francisco Sérgio</h4>
-                            <p class="text-secondary font-bold text-sm uppercase mt-1">Fiscal Titular</p>
-                        </div>
-                    </div>
-
-                    <!-- Card Membro 7 -->
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
-                        <div class="h-64 overflow-hidden relative bg-gray-200">
-                            <img src="../images/Gestão/Fiscal titular2.jpeg"
-                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                                alt="Fiscal">
-                        </div>
-                        <div class="p-5 border-b-4 border-primary">
-                            <h4 class="font-bold text-lg text-dark leading-tight">Francisco das Chagas</h4>
-                            <p class="text-primary font-bold text-sm uppercase mt-1">Fiscal Titular</p>
-                        </div>
-                    </div>
-
-                    <!-- Card Membro 8 -->
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
-                        <div class="h-64 overflow-hidden relative bg-gray-200">
-                            <img src="../images/Gestão/Fiscal suplente.jpeg"
-                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                                alt="Fiscal Suplente">
-                        </div>
-                        <div class="p-5 border-b-4 border-secondary">
-                            <h4 class="font-bold text-lg text-dark leading-tight">Abner Silva de Souza</h4>
-                            <p class="text-secondary font-bold text-sm uppercase mt-1">Fiscal Suplente</p>
-                        </div>
-                    </div>
-
-                    <!-- Card Membro 9 -->
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
-                        <div class="h-64 overflow-hidden relative bg-gray-200">
-                            <img src="../images/Gestão/Fiscal suplente2.jpeg"
-                                class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                                alt="Fiscal Suplente">
-                        </div>
-                        <div class="p-5 border-b-4 border-primary">
-                            <h4 class="font-bold text-lg text-dark leading-tight">Júlia Maria Mendes</h4>
-                            <p class="text-primary font-bold text-sm uppercase mt-1">Fiscal Suplente</p>
-                        </div>
-                    </div>
-
+                <!-- Container Dinâmico -->
+                <div id="conselho-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                 </div>
             </section>
 
@@ -348,9 +179,85 @@
         </div>
     </footer>
 
+    <!-- Lógica do Menu Mobile (Versão 2) -->
     <script>
         document.getElementById('mobile-menu-btn').addEventListener('click', () => {
             document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- Lógica Dinâmica Ajustada -->
+    <script src="../js/api.js"></script>
+    <script>
+        function renderCard(item, container) {
+            if (!item) return; // Segurança contra itens nulos
+            container.innerHTML += `
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all">
+                    <div class="aspect-[3/4] overflow-hidden relative bg-gray-200">
+                        <img src="${item.image || 'https://via.placeholder.com/300'}" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                             alt="${item.name || 'Membro da equipe'}">
+                    </div>
+                    <div class="p-5 border-b-4 border-primary">
+                        <h4 class="font-bold text-lg text-dark leading-tight">${item.name || 'Nome não informado'}</h4>
+                        <p class="text-primary font-bold text-sm uppercase mt-1">${item.role}</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            // Busca todos os dados da API
+            const data = await window.api.fetchContent('management');
+
+            // Função auxiliar para encontrar cargos contendo termos específicos (case insensitive)
+            const findByRole = (term) => data.filter(p => p.role && p.role.toLowerCase().includes(term.toLowerCase()));
+
+            // --- 1. Gestão Eclesiástica ---
+            const bispo = findByRole('Bispo');
+            const administrador = findByRole('Administrador Paroquial');
+            const eclesList = [...bispo, ...administrador];
+
+            // --- 2. Conselho (Ordem específica) ---
+            // Presidente, Vice, Coordenador(a), 1º Secretário, 2º Secretário, Tesoureiro, Fiscais
+
+            const presidente = findByRole('Presidente').filter(p => !p.role.toLowerCase().includes('vice')); // Evita pegar Vice-Presidente
+            const vice = findByRole('Vice-Presidente'); // Corrigido: hífen, não espaço
+            const coordenador = findByRole('Coordenador'); // Pega Coordenador(a), Coordenador(a) Geral
+
+            // Tratamento para 1º e 2º Secretário(a) - aceita "1ª", "1º", "1"
+            const sec1 = data.filter(p => p.role && (p.role.includes('1ª Secretári') || p.role.includes('1º Secretári')));
+            const sec2 = data.filter(p => p.role && (p.role.includes('2ª Secretári') || p.role.includes('2º Secretári')));
+
+            const tesoureiro = findByRole('Tesoureiro');
+            const fiscaisTitulares = findByRole('Fiscal Titular');
+            const fiscalTitular1 = fiscaisTitulares.slice(0, 1);
+            const fiscalTitular2 = fiscaisTitulares.slice(1, 2);
+
+            const fiscaisSuplentes = findByRole('Fiscal Suplente');
+            const fiscalSuplente1 = fiscaisSuplentes.slice(0, 1);
+            const fiscalSuplente2 = fiscaisSuplentes.slice(1, 2);
+
+            // Concatena na ordem exata solicitada
+            const conselhoList = [
+                ...presidente,
+                ...vice,
+                ...tesoureiro,
+                ...coordenador, // Coordenador(a) Geral agora aqui
+                ...sec1,
+                ...sec2,
+                ...fiscalTitular1,
+                ...fiscalTitular2,
+                ...fiscalSuplente1,
+                ...fiscalSuplente2
+            ];
+
+            // Limpa e renderiza
+            const eclesGrid = document.getElementById('ecles-grid');
+            const conselhoGrid = document.getElementById('conselho-grid');
+
+            eclesList.forEach(m => renderCard(m, eclesGrid));
+            conselhoList.forEach(m => renderCard(m, conselhoGrid));
         });
     </script>
 </body>

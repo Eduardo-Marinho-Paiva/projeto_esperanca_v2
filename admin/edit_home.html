@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="js/auth.js"></script>
+</head>
+<body class="bg-gray-50 min-h-screen pb-12">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <a href="dashboard.html" class="text-gray-500 hover:text-orange-600 transition flex items-center gap-2 font-medium">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </a>
+                <span class="h-6 w-px bg-gray-300"></span>
+                <h1 class="text-xl font-bold text-gray-800">Editar Conteúdo da Home</h1>
+            </div>
+            <button form="homeForm" type="submit" class="bg-green-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-green-700 transition shadow-md flex items-center gap-2">
+                <i class="fas fa-save"></i> Salvar Tudo
+            </button>
+        </div>
+    </header>
+
+    <div class="max-w-5xl mx-auto mt-8 px-6">
+        <form id="homeForm" class="space-y-8">
+            
+            <!-- Seção Quem Somos -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <div class="flex items-center gap-3 mb-6 border-b pb-4">
+                    <div class="bg-orange-100 text-orange-600 w-10 h-10 rounded-full flex items-center justify-center font-bold">1</div>
+                    <h3 class="font-bold text-lg text-gray-800">Quem Somos</h3>
+                </div>
+                
+                <div class="grid gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Texto de Apresentação</label>
+                        <textarea id="whoText" class="w-full border border-gray-300 p-3 rounded-lg h-32 focus:ring-2 focus:ring-orange-500 focus:outline-none transition"></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">URL da Imagem Ilustrativa</label>
+                        <input type="text" id="whoImage" class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none transition">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção Vídeo -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <div class="flex items-center gap-3 mb-6 border-b pb-4">
+                    <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center font-bold">2</div>
+                    <h3 class="font-bold text-lg text-gray-800">Vídeo Institucional</h3>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Link do YouTube (Embed ou URL)</label>
+                    <input type="text" id="videoUrl" class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none transition" placeholder="https://www.youtube.com/watch?v=...">
+                </div>
+            </div>
+
+            <!-- Seção Resultados -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <div class="flex items-center gap-3 mb-6 border-b pb-4 justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-purple-100 text-purple-600 w-10 h-10 rounded-full flex items-center justify-center font-bold">3</div>
+                        <h3 class="font-bold text-lg text-gray-800">Resultados & Impacto</h3>
+                    </div>
+                    <button type="button" onclick="addStat()" class="text-sm bg-purple-50 text-purple-700 px-3 py-1 rounded hover:bg-purple-100 font-medium transition">+ Adicionar Dado</button>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Ano de Referência</label>
+                    <input type="number" id="statsYear" class="w-32 border border-gray-300 p-2 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none transition text-center font-bold text-lg">
+                </div>
+                
+                <div id="statsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Stats dinâmicos -->
+                </div>
+            </div>
+
+            <!-- Seção Parceiros -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <div class="flex items-center gap-3 mb-6 border-b pb-4 justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center font-bold">4</div>
+                        <h3 class="font-bold text-lg text-gray-800">Parceiros</h3>
+                    </div>
+                    <button type="button" onclick="addPartner()" class="text-sm bg-green-50 text-green-700 px-3 py-1 rounded hover:bg-green-100 font-medium transition">+ Adicionar Logo</button>
+                </div>
+
+                <div id="partnersContainer" class="space-y-3">
+                    <!-- Inputs de parceiros -->
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        let currentStats = [];
+        let currentPartners = [];
+
+        async function loadData() {
+            try {
+                const res = await fetch('http://localhost:3000/api/content/home');
+                const data = await res.json();
+                
+                document.getElementById('whoText').value = data.whoWeAre?.text || '';
+                document.getElementById('whoImage').value = data.whoWeAre?.image || '';
+                document.getElementById('videoUrl').value = data.learnMoreVideo || '';
+                document.getElementById('statsYear').value = data.results?.year || new Date().getFullYear();
+
+                currentStats = data.results?.stats || [];
+                currentPartners = data.partners || [];
+                renderStats();
+                renderPartners();
+            } catch(e) {
+                console.log("Erro ao carregar dados (backend offline?)");
+            }
+        }
+
+        function renderStats() {
+            const div = document.getElementById('statsContainer');
+            div.innerHTML = '';
+            currentStats.forEach((stat, index) => {
+                div.innerHTML += `
+                    <div class="flex gap-2 items-center bg-gray-50 p-3 rounded border">
+                        <div class="flex-1">
+                            <label class="text-xs text-gray-500 mb-1 block">Título</label>
+                            <input type="text" value="${stat.title}" onchange="updateStat(${index}, 'title', this.value)" class="w-full border p-1 rounded text-sm">
+                        </div>
+                        <div class="w-24">
+                            <label class="text-xs text-gray-500 mb-1 block">Valor</label>
+                            <input type="number" value="${stat.count}" onchange="updateStat(${index}, 'count', this.value)" class="w-full border p-1 rounded text-sm text-center font-bold">
+                        </div>
+                        <button type="button" onclick="removeStat(${index})" class="text-red-500 hover:text-red-700 hover:bg-red-50 p-2 rounded mt-4"><i class="fas fa-trash"></i></button>
+                    </div>
+                `;
+            });
+        }
+
+        function renderPartners() {
+            const div = document.getElementById('partnersContainer');
+            div.innerHTML = '';
+            currentPartners.forEach((p, index) => {
+                div.innerHTML += `
+                    <div class="flex gap-3 items-center group">
+                        <div class="bg-gray-100 p-2 rounded w-8 h-8 flex items-center justify-center text-gray-400 font-bold text-xs">${index+1}</div>
+                        <input type="text" placeholder="URL da Imagem do Parceiro" value="${p.image}" onchange="updatePartner(${index}, this.value)" class="border border-gray-300 p-2 rounded-lg flex-1 focus:ring-2 focus:ring-green-500 outline-none">
+                        <button type="button" onclick="removePartner(${index})" class="text-red-400 hover:text-red-600 transition opacity-50 group-hover:opacity-100"><i class="fas fa-times-circle text-xl"></i></button>
+                    </div>
+                `;
+            });
+        }
+
+        function addStat() { currentStats.push({ title: '', count: 0 }); renderStats(); }
+        function removeStat(i) { currentStats.splice(i, 1); renderStats(); }
+        function updateStat(i, field, val) { currentStats[i][field] = val; }
+
+        function addPartner() { currentPartners.push({ image: '' }); renderPartners(); }
+        function removePartner(i) { currentPartners.splice(i, 1); renderPartners(); }
+        function updatePartner(i, val) { currentPartners[i].image = val; }
+
+        document.getElementById('homeForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const token = localStorage.getItem('token');
+            const body = {
+                whoWeAre: {
+                    text: document.getElementById('whoText').value,
+                    image: document.getElementById('whoImage').value
+                },
+                learnMoreVideo: document.getElementById('videoUrl').value,
+                results: {
+                    year: document.getElementById('statsYear').value,
+                    stats: currentStats
+                },
+                partners: currentPartners
+            };
+
+            await fetch('http://localhost:3000/api/content/home', {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json', 'x-auth-token': token },
+                body: JSON.stringify(body)
+            });
+            alert('Salvo com sucesso!');
+        });
+
+        loadData();
+    </script>
+</body>
+</html>

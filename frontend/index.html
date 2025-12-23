@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto Esperança - Home</title>
+    <link rel="icon" href="/images/projeto_esperanca_logo.svg" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuração Personalizada -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#F47701',
+                        primaryDark: '#d36702',
+                        secondary: '#0AA550',
+                        dark: '#161618',
+                        light: '#F9F9FF',
+                    },
+                    fontFamily: {
+                        sans: ['DM Sans', 'sans-serif'],
+                        display: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
+
+    <!-- CABEÇALHO -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 lg:px-8 h-20 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="/images/projeto_esperanca_logo.svg" alt="Logo" class="h-12 w-auto transition-transform group-hover:scale-105" />
+                <div class="hidden md:flex flex-col">
+                    <h1 class="text-secondary font-display font-bold text-lg leading-tight uppercase">Projeto Esperança</h1>
+                    <p class="text-dark text-xs font-medium">Pe. Guido Tonelotto</p>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="text-primary font-bold transition-colors">Home</a>
+                <a href="/html/projects.html" class="text-dark hover:text-primary font-bold transition-colors">Projetos</a>
+                <a href="/html/management.html" class="text-dark hover:text-primary font-bold transition-colors">Gestão</a>
+                <a href="/html/stories.html" class="text-dark hover:text-primary font-bold transition-colors">Histórias</a>
+                <a href="/html/pr.guido-history.html" class="text-dark hover:text-primary font-bold transition-colors">Sobre Pe. Guido</a>
+                <a href="/html/donate.html" class="bg-primary hover:bg-primaryDark text-white px-6 py-2.5 rounded-full font-bold shadow-lg transition-transform hover:-translate-y-0.5">Doe Agora</a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="md:hidden text-dark focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
+            <div class="flex flex-col p-4 space-y-4 font-semibold text-center">
+                <a href="index.html" class="text-primary">Home</a>
+                <a href="/html/projects.html" class="text-dark hover:text-primary">Projetos</a>
+                <a href="/html/management.html" class="text-dark hover:text-primary">Gestão</a>
+                <a href="/html/stories.html" class="text-dark hover:text-primary">Histórias</a>
+                <a href="/html/pr.guido-history.html" class="text-dark hover:text-primary">Sobre Pe. Guido</a>
+                <a href="/html/donate.html" class="bg-primary text-white py-3 rounded-xl mx-4">Doe Agora</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        
+        <!-- Hero Section -->
+        <section class="relative w-full h-[600px] flex items-center justify-center bg-cover bg-center" style="background-image: url('./images/imagem_inicio.png');">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
+            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-6xl font-display font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                    Ser a Esperança é <br/><span class="text-primary">fazer a diferença</span>
+                </h2>
+                <p class="text-lg md:text-2xl text-gray-200 mb-10 font-light max-w-2xl mx-auto">
+                    Acredite no poder de um gesto solidário. Juntos podemos transformar vidas e construir futuros.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="/html/donate.html" class="bg-primary hover:bg-primaryDark text-white text-lg px-8 py-4 rounded-full font-bold shadow-lg transition-transform hover:scale-105">
+                        Doe Agora
+                    </a>
+                    <a href="/html/pr.guido-history.html" class="bg-transparent border-2 border-white hover:bg-white hover:text-dark text-white text-lg px-8 py-4 rounded-full font-bold transition-all">
+                        Saiba Mais
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Nós (Dinâmico) -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-12 bg-light rounded-3xl p-8 lg:p-12 shadow-sm border border-gray-100">
+                    <div class="lg:w-1/2 space-y-6">
+                        <div class="inline-block px-4 py-1 bg-orange-100 text-primary rounded-full text-sm font-bold uppercase tracking-wider">Sobre a Instituição</div>
+                        <h3 class="text-3xl md:text-4xl font-display font-bold text-dark">Quem Somos?</h3>
+                        <!-- ID 'who-text' adicionado para povoamento dinâmico -->
+                        <p id="who-text" class="text-gray-600 text-lg leading-relaxed text-justify">
+                            Carregando...
+                        </p>
+                        <a href="/html/pr.guido-history.html" class="inline-flex items-center text-primary font-bold hover:underline mt-2">
+                            Conheça nossa história
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                    <div class="lg:w-1/2 w-full h-[300px] lg:h-[400px] rounded-2xl overflow-hidden shadow-2xl group">
+                        <!-- ID 'who-img' adicionado para povoamento dinâmico -->
+                        <img id="who-img" src="/images/about_us_img.png" alt="Sobre Nós" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vídeo Institucional (Dinâmico) -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4 text-center">
+                <h3 class="text-3xl md:text-4xl font-display font-bold text-primary mb-10">Conheça um pouco mais</h3>
+                <div class="max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl bg-black aspect-video relative">
+                    <iframe id="video-frame" class="w-full h-full" src="" title="Vídeo Institucional" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resultados (Dinâmico) -->
+        <section class="py-20 bg-primary text-white relative overflow-hidden">
+            <div class="container mx-auto px-4 relative z-10">
+                <!-- ID 'stats-year' para texto dinâmico, mantendo estilo do H3 -->
+                <h3 class="text-center text-3xl md:text-4xl font-display font-bold mb-16">
+                    Resultados que Inspiram - <span id="stats-year">...</span>
+                </h3>
+                <!-- ID 'stats-grid' adicionado e conteúdo estático removido para inserção dinâmica -->
+                <div id="stats-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Cards serão inseridos via JS mantendo o estilo da V2 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- INSTAGRAM CAROUSEL (Mantido da V2) -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 mb-10 text-center">
+                <h3 class="text-3xl md:text-4xl font-display font-bold text-dark flex items-center justify-center gap-3">
+                    <img src="/images/svg-instagram.svg" class="w-8 h-8" alt="Insta"> Siga-nos no Instagram
+                </h3>
+            </div>
+            
+            <div class="container mx-auto px-4 relative group">
+                <!-- Botão Esquerda -->
+                <button onclick="scrollContainer('insta-track', -320)" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white text-dark p-3 rounded-full shadow-lg hover:bg-primary hover:text-white transition-colors hidden md:flex items-center justify-center border border-gray-100 -ml-4">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+
+                <!-- Scrollable Track -->
+                <div id="insta-track" class="flex gap-6 overflow-x-auto hide-scrollbar scroll-smooth snap-x snap-mandatory py-4 px-1">
+                    <!-- Os itens serão injetados via JS local (lógica visual V2) -->
+                </div>
+
+                <!-- Botão Direita -->
+                <button onclick="scrollContainer('insta-track', 320)" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white text-dark p-3 rounded-full shadow-lg hover:bg-primary hover:text-white transition-colors hidden md:flex items-center justify-center border border-gray-100 -mr-4">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- PARCEIROS (Dinâmico) -->
+        <section class="py-16 bg-gray-50 border-t border-gray-200">
+            <h3 class="text-center text-2xl font-bold text-gray-400 mb-10 uppercase tracking-widest">Nossos Parceiros</h3>
+            
+            <div class="container mx-auto px-4 relative max-w-5xl group">
+                <!-- Botão Esquerda -->
+                <button onclick="scrollContainer('partners-track', -200)" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white text-dark p-2 rounded-full shadow-md hover:text-primary transition-colors hidden md:flex -ml-4">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+
+                <!-- ID 'partners-track' será usado para injeção dinâmica -->
+                <div id="partners-track" class="flex gap-12 overflow-x-auto hide-scrollbar scroll-smooth items-center justify-start md:justify-center">
+                    <!-- Imagens inseridas via JS -->
+                </div>
+
+                <!-- Botão Direita -->
+                <button onclick="scrollContainer('partners-track', 200)" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white text-dark p-2 rounded-full shadow-md hover:text-primary transition-colors hidden md:flex -mr-4">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- Whatsapp Float -->
+        <div class="fixed bottom-6 right-6 z-50">
+            <a href="https://api.whatsapp.com/send?phone=5584987610226" target="_blank" class="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-full shadow-lg transition-all hover:scale-110 font-bold">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.017-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                Fale Conosco
+            </a>
+        </div>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-white border-t-4 border-primary pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div class="flex flex-col items-center md:items-start text-center md:text-left space-y-6">
+                    <div class="flex items-center gap-3">
+                        <img src="/images/projeto_esperanca_logo.svg" alt="Logo" class="w-16 h-auto">
+                        <div>
+                            <h3 class="text-xl font-bold text-secondary uppercase">Projeto Esperança</h3>
+                            <p class="text-sm text-gray-500">Pe. Guildo Tonelotto</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 max-w-sm">
+                        Ajude o Projeto Esperança a continuar transformando vidas. Com sua doação, podemos alcançar mais pessoas e levar esperança a quem mais precisa.
+                    </p>
+                    <a href="/html/donate.html" class="bg-primary hover:bg-primaryDark text-white font-bold py-3 px-8 rounded-full shadow-md transition-colors">
+                        Quero Doar
+                    </a>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <h3 class="text-dark font-bold text-lg mb-6 border-b-2 border-primary pb-2">Menu</h3>
+                    <ul class="space-y-3 text-center">
+                        <li><a href="index.html" class="text-gray-600 hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="/html/projects.html" class="text-gray-600 hover:text-primary transition-colors">Projetos</a></li>
+                        <li><a href="/html/stories.html" class="text-gray-600 hover:text-primary transition-colors">Histórias</a></li>
+                        <li><a href="/html/management.html" class="text-gray-600 hover:text-primary transition-colors">Gestão</a></li>
+                        <li><a href="/html/pr.guido-history.html" class="text-gray-600 hover:text-primary transition-colors">Sobre Pe. Guido</a></li>
+                        <li><a href="/html/donate.html" class="text-primary font-bold hover:underline">Doe Agora</a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <h3 class="text-dark font-bold text-lg mb-6 border-b-2 border-primary pb-2">Siga-nos no Instagram</h3>
+                    <div class="grid grid-cols-2 gap-3 w-48">
+                        <a href="https://www.instagram.com/projetoesperanca_/" target="_blank" class="block rounded-lg overflow-hidden hover:opacity-80 transition-opacity">
+                            <img src="/images/footer1.png" alt="Insta" class="w-full h-24 object-cover">
+                        </a>
+                        <a href="https://www.instagram.com/projetoesperanca_/" target="_blank" class="block rounded-lg overflow-hidden hover:opacity-80 transition-opacity">
+                            <img src="/images/footer2.png" alt="Insta" class="w-full h-24 object-cover">
+                        </a>
+                        <a href="https://www.instagram.com/projetoesperanca_/" target="_blank" class="block rounded-lg overflow-hidden hover:opacity-80 transition-opacity">
+                            <img src="/images/footer3.png" alt="Insta" class="w-full h-24 object-cover">
+                        </a>
+                        <a href="https://www.instagram.com/projetoesperanca_/" target="_blank" class="block rounded-lg overflow-hidden hover:opacity-80 transition-opacity">
+                            <img src="/images/footer4.png" alt="Insta" class="w-full h-24 object-cover">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">© 2024 Projeto Esperança. Todos os direitos reservados.</p>
+                <div class="flex gap-4">
+                    <a href="https://www.instagram.com/projetoesperanca_/" class="text-gray-400 hover:text-primary transition-colors"><img src="/images/svg-instagram.svg" class="w-6 h-6"></a>
+                    <a href="https://www.youtube.com/@projetoesperanca6744" class="text-gray-400 hover:text-red-600 transition-colors"><img src="/images/svg-youtube.svg" class="w-6 h-6"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/api.js"></script>
+    <script>
+        // Função Genérica de Scroll (Versão 2)
+        function scrollContainer(containerId, amount) {
+            const container = document.getElementById(containerId);
+            container.scrollBy({
+                left: amount,
+                behavior: 'smooth'
+            });
+        }
+
+        // Lógica Principal
+        document.addEventListener('DOMContentLoaded', async () => {
+            
+            // --- 1. Lógica do Menu Mobile (Comum a ambas as versões) ---
+            document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.toggle('hidden');
+            });
+
+            // --- 2. Lógica Visual do Instagram (Versão 2) ---
+            const instaTrack = document.getElementById('insta-track');
+            const posts = [
+                { img: 'insta1.jpg', link: 'https://www.instagram.com/p/Ct7lhm_rqiB/' },
+                { img: 'insta2.jpg', link: 'https://www.instagram.com/p/DRyJrI9jFCt/' },
+                { img: 'insta3.jpg', link: 'https://www.instagram.com/p/DRpJQbrgODs/' },
+                { img: 'insta4.jpg', link: 'https://www.instagram.com/p/DRUi82vAMzX/' },
+                { img: 'insta5.jpg', link: 'https://www.instagram.com/p/DRRyw0CgOXQ/' },
+                { img: 'insta6.jpg', link: 'https://www.instagram.com/p/DQ4NF5aAD-D/' },
+                { img: 'insta7.jpg', link: 'https://www.instagram.com/p/DQrQ5SPgC6I/' },
+                { img: 'insta8.jpg', link: 'https://www.instagram.com/p/DQopOy3gIMD/' }
+            ];
+
+            let htmlContent = '';
+            posts.forEach(post => {
+                htmlContent += `
+                    <a href="${post.link}" target="_blank" class="flex-shrink-0 w-72 h-96 bg-gray-200 rounded-2xl overflow-hidden shadow-md border border-gray-100 relative group cursor-pointer hover:scale-[1.02] transition-transform duration-300 snap-center block">
+                        <img src="/images/${post.img}" alt="Instagram Post" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white">
+                             <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </div>
+                    </a>
+                `;
+            });
+            instaTrack.innerHTML = htmlContent;
+
+            // --- 3. Lógica de Consumo de API (Versão 1) adaptada à estrutura da V2 ---
+            const data = await window.api.fetchContent('home');
+
+            // Quem Somos
+            if(data.whoWeAre) {
+                document.getElementById('who-text').innerText = data.whoWeAre.text;
+                if(data.whoWeAre.image) document.getElementById('who-img').src = data.whoWeAre.image;
+            }
+
+            // Vídeo
+            if(data.learnMoreVideo) {
+                document.getElementById('video-frame').src = window.api.getYoutubeEmbedUrl(data.learnMoreVideo);
+            }
+
+            // Resultados
+            if(data.results) {
+                // Injeta o ano no cabeçalho
+                document.getElementById('stats-year').innerText = data.results.year;
+                
+                const statsGrid = document.getElementById('stats-grid');
+                // Gera o HTML usando as classes de estilo da V2
+                data.results.stats.forEach(stat => {
+                    statsGrid.innerHTML += `
+                        <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 text-center border border-white/20 hover:-translate-y-2 transition-transform">
+                            <div class="text-5xl font-bold mb-2">${stat.count}</div>
+                            <p class="text-lg font-medium opacity-90">${stat.title}</p>
+                        </div>
+                    `;
+                });
+            }
+
+            // Parceiros
+            if(data.partners) {
+                const partnersDiv = document.getElementById('partners-track'); // ID ajustado para V2
+                // Gera o HTML usando as classes de estilo da V2
+                data.partners.forEach(p => {
+                    partnersDiv.innerHTML += `
+                        <img src="${p.image}" class="h-16 w-auto grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100 flex-shrink-0" alt="Parceiro">
+                    `;
+                });
+            }
+        });
+    </script>
+</body>
+</html>

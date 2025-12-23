@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nossos Projetos - Projeto Esperança</title>
     <link rel="icon" href="../images/projeto_esperanca_logo.svg" />
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Configuração Personalizada -->
     <script>
         tailwind.config = {
@@ -59,7 +60,9 @@
             </nav>
 
             <button id="mobile-menu-btn" class="md:hidden text-dark focus:outline-none">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
             </button>
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
@@ -88,210 +91,12 @@
             </div>
         </section>
 
-        <!-- Lista de Projetos -->
-        <div class="flex flex-col">
-            
-            <!-- 1. Cestas Básicas (Laranja) -->
-            <section class="bg-primary text-white py-20">
-                <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/2 space-y-6 order-2 md:order-1">
-                        <div class="flex items-center gap-3">
-                            <img src="../images/white-heart.svg" class="w-8 h-8 opacity-90" alt="icon">
-                            <h3 class="text-3xl font-display font-bold">Doações de Cestas Básicas</h3>
-                        </div>
-                        <p class="text-orange-50 text-justify leading-relaxed">
-                            O projeto "Dai-lhes vós mesmos de comer" tem como missão combater a fome e a insegurança alimentar através da doação de cestas básicas para famílias em situação de vulnerabilidade. Cada cesta é composta por alimentos essenciais que garantem a nutrição adequada. Através da mobilização de doadores e voluntários, conseguimos distribuir essas cestas regularmente, proporcionando alívio imediato e dignidade.
-                        </p>
-                        <div class="flex flex-wrap gap-2 pt-4">
-                            <span class="px-3 py-1 bg-white/20 rounded-full text-sm font-semibold">UERN Ação</span>
-                            <span class="px-3 py-1 bg-white/20 rounded-full text-sm font-semibold">Mesa Brasil</span>
-                            <span class="px-3 py-1 bg-white/20 rounded-full text-sm font-semibold">Albem</span>
-                        </div>
-                    </div>
-                    <div class="md:w-1/2 order-1 md:order-2">
-                        <img src="../images/Projects - Doação de cestas básicas.jpg" class="rounded-2xl shadow-xl w-full h-[350px] object-cover border-4 border-white/20" alt="Cestas">
-                    </div>
-                </div>
-            </section>
-
-            <!-- 2. Roupas (Branco) -->
-            <section class="bg-white text-dark py-20">
-                <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/2">
-                        <img src="../images/Projects - Bazar solidário.jpg" class="rounded-2xl shadow-xl w-full h-[350px] object-cover" alt="Roupas">
-                    </div>
-                    <div class="md:w-1/2 space-y-6">
-                        <div class="flex items-center gap-3">
-                            <img src="../images/heart.svg" class="w-8 h-8 text-primary" alt="icon">
-                            <h3 class="text-3xl font-display font-bold">Doação de Roupas</h3>
-                        </div>
-                        <p class="text-gray-600 text-justify leading-relaxed">
-                            Desde 2017, o Projeto Esperança realiza a ação “Estava Nu e Me Vestistes”, voltada para pessoas em situação de vulnerabilidade social. A iniciativa nasceu da sensibilidade diante da invisibilidade social vivida por essas pessoas, e tem como missão promover dignidade e bem-estar por meio da doação de roupas e itens essenciais. Todas as peças são cuidadosamente triadas, armazenadas e registradas.
-                        </p>
-                        <div class="flex flex-wrap gap-2 pt-4">
-                            <span class="px-3 py-1 bg-gray-100 text-primary rounded-full text-sm font-bold border border-primary/20">Sustentabilidade</span>
-                            <span class="px-3 py-1 bg-gray-100 text-primary rounded-full text-sm font-bold border border-primary/20">Dignidade</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 3. Almoço Solidário (Laranja) -->
-            <section class="bg-primary text-white py-20">
-                <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/2 space-y-6 order-2 md:order-1">
-                        <div class="flex items-center gap-3">
-                            <img src="../images/white-heart.svg" class="w-8 h-8 opacity-90" alt="icon">
-                            <h3 class="text-3xl font-display font-bold">Almoço Solidário</h3>
-                        </div>
-                        <p class="text-orange-50 text-justify leading-relaxed">
-                            O Almoço Solidário – Barriguinha Cheia é uma ação semanal que oferece refeições nutritivas e equilibradas para pessoas em situação de vulnerabilidade social. Mais do que um simples ato de alimentação, este projeto busca criar um ambiente acolhedor onde os participantes podem compartilhar suas histórias e construir laços de amizade.
-                        </p>
-                    </div>
-                    <div class="md:w-1/2 order-1 md:order-2">
-                        <img src="../images/Projects - Almoço solidário.jpg" class="rounded-2xl shadow-xl w-full h-[350px] object-cover border-4 border-white/20" alt="Almoço">
-                    </div>
-                </div>
-            </section>
-
-            <!-- 4. Capoeira (Branco) -->
-            <section class="bg-white text-dark py-20">
-                <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/2">
-                        <img src="../images/Projects4.png" class="rounded-2xl shadow-xl w-full h-[350px] object-cover" alt="Capoeira">
-                    </div>
-                    <div class="md:w-1/2 space-y-6">
-                        <div class="flex items-center gap-3">
-                            <img src="../images/Capoeira.png" class="w-12 h-12 object-contain" alt="icon">
-                            <h3 class="text-3xl font-display font-bold">Capoeira</h3>
-                        </div>
-                        <p class="text-gray-600 text-justify leading-relaxed">
-                            Promovemos aulas de capoeira como ferramenta de inclusão social, disciplina e valorização da cultura brasileira. As atividades físicas ajudam no desenvolvimento motor e cognitivo de crianças e adolescentes, além de fomentar o respeito mútuo e a cooperação dentro da comunidade.
-                        </p>
-                        <div class="flex flex-wrap gap-2 pt-4">
-                            <span class="px-3 py-1 bg-gray-100 text-primary rounded-full text-sm font-bold border border-primary/20">Esporte</span>
-                            <span class="px-3 py-1 bg-gray-100 text-primary rounded-full text-sm font-bold border border-primary/20">Cultura</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 5. Violão (Laranja) -->
-            <section class="bg-primary text-white py-20">
-                <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/2 space-y-6 order-2 md:order-1">
-                        <div class="flex items-center gap-3">
-                            <img src="../images/Violao.png" class="w-12 h-12 object-contain bg-white rounded-full p-1" alt="icon">
-                            <h3 class="text-3xl font-display font-bold">Violão</h3>
-                        </div>
-                        <p class="text-orange-50 text-justify leading-relaxed">
-                            O projeto Violão proporciona aulas de música que vão além do ensino técnico. Nossas aulas despertam a paixão pela música, incentivando a expressão criativa. O aprendizado do violão contribui para a disciplina, concentração e autoestima. Realizamos apresentações e recitais para que os alunos mostrem seu progresso.
-                        </p>
-                    </div>
-                    <div class="md:w-1/2 order-1 md:order-2">
-                        <img src="../images/Projects5.png" class="rounded-2xl shadow-xl w-full h-[350px] object-cover border-4 border-white/20" alt="Violão">
-                    </div>
-                </div>
-            </section>
-
-            <!-- 6. Jovem Sonhador (Branco) -->
-            <section class="bg-white text-dark py-20">
-                <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/2">
-                        <img src="../images/Projects6.png" class="rounded-2xl shadow-xl w-full h-[350px] object-cover" alt="Jovem Sonhador">
-                    </div>
-                    <div class="md:w-1/2 space-y-6">
-                        <div class="flex items-center gap-3">
-                            <img src="../images/heart.svg" class="w-8 h-8 text-primary" alt="icon">
-                            <h3 class="text-3xl font-display font-bold">Programa Jovem Sonhador</h3>
-                        </div>
-                        <p class="text-gray-600 text-justify leading-relaxed">
-                            O Programa Jovem Sonhador é uma plataforma de capacitação para jovens que desejam ingressar no mercado digital. Oferecemos cursos em áreas como programação, design gráfico e marketing, focando em habilidades práticas. Inclui mentorias sobre desenvolvimento pessoal e empreendedorismo.
-                        </p>
-                        <div class="flex flex-wrap gap-2 pt-4">
-                            <span class="px-3 py-1 bg-gray-100 text-primary rounded-full text-sm font-bold border border-primary/20">Educação</span>
-                            <span class="px-3 py-1 bg-gray-100 text-primary rounded-full text-sm font-bold border border-primary/20">Tecnologia</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 7. Boa Idade (Laranja) -->
-            <section class="bg-primary text-white py-20">
-                <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/2 space-y-6 order-2 md:order-1">
-                        <div class="flex items-center gap-3">
-                            <img src="../images/boa_idade.jpg" class="w-12 h-12 object-contain rounded-full border-2 border-white" alt="icon">
-                            <h3 class="text-3xl font-display font-bold">Boa Idade</h3>
-                        </div>
-                        <p class="text-orange-50 text-justify leading-relaxed">
-                            O projeto Boa Idade é um espaço de convivência e aprendizado para idosos, com atividades que promovem o bem-estar físico, mental e social. Oferecemos aulas de ginástica, artesanato, dança e oficinas de memória, estimulando a vitalidade e a independência dos participantes.
-                        </p>
-                    </div>
-                    <div class="md:w-1/2 order-1 md:order-2">
-                        <img src="../images/Projects - Boa idade.jpg" class="rounded-2xl shadow-xl w-full h-[350px] object-cover border-4 border-white/20" alt="Boa Idade">
-                    </div>
-                </div>
-            </section>
-
-            <!-- 8. Ballet (Branco) -->
-            <section class="bg-white text-dark py-20">
-                <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/2">
-                        <img src="../images/Projects - Ballet.jpg" class="rounded-2xl shadow-xl w-full h-[350px] object-cover" alt="Ballet">
-                    </div>
-                    <div class="md:w-1/2 space-y-6">
-                        <div class="flex items-center gap-3">
-                            <img src="../images/heart.svg" class="w-8 h-8 text-primary" alt="icon">
-                            <h3 class="text-3xl font-display font-bold">Ballet</h3>
-                        </div>
-                        <p class="text-gray-600 text-justify leading-relaxed">
-                            O projeto Ballet oferece aulas de dança clássica que combinam técnica, disciplina e expressão artística. O ballet melhora a postura, a coordenação e promove a autoestima. Realizamos espetáculos anuais que permitem aos alunos demonstrar suas habilidades para a comunidade.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 9. Artesãs (Laranja) -->
-            <section class="bg-primary text-white py-20">
-                <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/2 space-y-6 order-2 md:order-1">
-                        <div class="flex items-center gap-3">
-                            <img src="../images/Artesas_jose.jpg" class="w-12 h-12 object-contain rounded-full border-2 border-white" alt="icon">
-                            <h3 class="text-3xl font-display font-bold">Artesãs de José</h3>
-                        </div>
-                        <p class="text-orange-50 text-justify leading-relaxed">
-                            Dedicado a apoiar mulheres através do artesanato. Oferecemos capacitação técnica e suporte para comercialização dos produtos. Este projeto promove a autonomia financeira das participantes, valorizando seu trabalho e contribuindo para a preservação das tradições culturais.
-                        </p>
-                    </div>
-                    <div class="md:w-1/2 order-1 md:order-2">
-                        <img src="../images/Projects9.png" class="rounded-2xl shadow-xl w-full h-[350px] object-cover border-4 border-white/20" alt="Artesãs">
-                    </div>
-                </div>
-            </section>
-
-            <!-- 10. Bazar Solidário (Branco) -->
-            <section class="bg-white text-dark py-20">
-                <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/2">
-                        <img src="../images/Projects10.png" class="rounded-2xl shadow-xl w-full h-[350px] object-cover" alt="Bazar">
-                    </div>
-                    <div class="md:w-1/2 space-y-6">
-                        <div class="flex items-center gap-3">
-                            <img src="../images/bazar_solidario.jpg" class="w-12 h-12 object-contain rounded-full" alt="icon">
-                            <h3 class="text-3xl font-display font-bold">Bazar Solidário</h3>
-                        </div>
-                        <p class="text-gray-600 text-justify leading-relaxed">
-                            O Bazar Solidário promove a economia circular, vendendo itens doados a preços simbólicos. O objetivo é proporcionar acesso a bens essenciais para a comunidade, enquanto os recursos arrecadados são reinvestidos nos projetos sociais da instituição.
-                        </p>
-                        <div class="flex flex-wrap gap-2 pt-4">
-                            <span class="px-3 py-1 bg-gray-100 text-primary rounded-full text-sm font-bold border border-primary/20">Solidariedade</span>
-                            <span class="px-3 py-1 bg-gray-100 text-primary rounded-full text-sm font-bold border border-primary/20">Economia Circular</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
+        <!-- Lista de Projetos (Container Dinâmico) -->
+        <div id="projects-list" class="flex flex-col">
+            <div class="text-center py-20">
+                <div class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-primary border-t-transparent"></div>
+                <p class="mt-2 text-gray-500">Carregando projetos...</p>
+            </div>
         </div>
     </main>
 
@@ -334,11 +139,109 @@
         </div>
     </footer>
 
-    <!-- Script Menu Mobile -->
+    <!-- Lógica de Menu Mobile -->
     <script>
         document.getElementById('mobile-menu-btn').addEventListener('click', () => {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
     </script>
+
+    <!-- Lógica de Povoamento Dinâmico (API) -->
+    <script src="../js/api.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            // Consumo de dados da API (Lógica da Versão 1)
+            const projetos = await window.api.fetchContent('projects');
+            const container = document.getElementById('projects-list');
+            container.innerHTML = '';
+
+            if (projetos.length === 0) {
+                container.innerHTML = '<p class="text-center py-20 text-gray-500 font-bold">Nenhum projeto cadastrado no momento.</p>';
+                return;
+            }
+
+            projetos.forEach((proj, index) => {
+                // Adaptação da lógica visual da Versão 2 para o loop da Versão 1
+                // Seção ímpar (index 0, 2...) = Fundo Laranja (Primary)
+                // Seção par (index 1, 3...) = Fundo Branco
+                const isOrangeSection = index % 2 === 0;
+
+                // Definição de classes baseadas no estado (Orange vs White)
+                const sectionClasses = isOrangeSection 
+                    ? 'bg-primary text-white' 
+                    : 'bg-white text-dark';
+                
+                const paragraphClasses = isOrangeSection 
+                    ? 'text-orange-50' 
+                    : 'text-gray-600';
+                
+                const badgeClasses = isOrangeSection 
+                    ? 'bg-white/20 text-white' 
+                    : 'bg-gray-100 text-primary border border-primary/20';
+
+                const imageBorderClass = isOrangeSection 
+                    ? 'border-4 border-white/20' 
+                    : '';
+
+                // Lógica de Zig-Zag (Layout) e Ordem Mobile
+                // Orange (Ímpar): Texto Esquerda (md:order-1), Imagem Direita (md:order-2)
+                // White (Par): Imagem Esquerda (md:order-1), Texto Direita (md:order-2)
+                // Mobile: Sempre Imagem em cima (order-1), Texto embaixo (order-2)
+                const textOrderClass = isOrangeSection ? 'order-2 md:order-1' : 'order-2 md:order-2';
+                const imgOrderClass = isOrangeSection ? 'order-1 md:order-2' : 'order-1 md:order-1';
+
+                // Ícones: Usa logo do projeto se existir, senão usa ícone padrão baseado na cor de fundo
+                let iconHtml = '';
+                if (proj.logo) {
+                    // Logo específica do projeto
+                    iconHtml = `<img src="${proj.logo}" class="w-12 h-12 object-contain rounded-full bg-white p-1" alt="icon">`;
+                } else if (isOrangeSection) {
+                    // Ícone padrão para fundo laranja (coração branco)
+                    iconHtml = `<img src="../images/white-heart.svg" class="w-8 h-8 opacity-90" alt="icon">`;
+                } else {
+                    // Ícone padrão para fundo branco (coração laranja)
+                    iconHtml = `<img src="../images/heart.svg" class="w-8 h-8 text-primary" alt="icon">`;
+                }
+
+                // Geração das Tags
+                const tagsHtml = proj.tags.map(t => 
+                    `<span class="px-3 py-1 rounded-full text-sm font-bold transition-colors ${badgeClasses}">${t}</span>`
+                ).join(' ');
+
+                // Template String usando a estrutura HTML exata da Versão 2
+                const html = `
+                    <section class="${sectionClasses} py-20">
+                        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+                            
+                            <!-- Coluna de Texto -->
+                            <div class="md:w-1/2 space-y-6 ${textOrderClass}">
+                                <div class="flex items-center gap-3">
+                                    ${iconHtml}
+                                    <h3 class="text-3xl font-display font-bold">${proj.title}</h3>
+                                </div>
+                                <p class="${paragraphClasses} text-justify leading-relaxed">
+                                    ${proj.description}
+                                </p>
+                                <div class="flex flex-wrap gap-2 pt-4">
+                                    ${tagsHtml}
+                                </div>
+                            </div>
+
+                            <!-- Coluna de Imagem -->
+                            <div class="md:w-1/2 ${imgOrderClass}">
+                                <img src="${proj.image}" 
+                                     class="rounded-2xl shadow-xl w-full h-[350px] object-cover ${imageBorderClass}" 
+                                     alt="${proj.title}">
+                            </div>
+
+                        </div>
+                    </section>
+                `;
+
+                container.innerHTML += html;
+            });
+        });
+    </script>
 </body>
+
 </html>
