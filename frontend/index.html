@@ -319,7 +319,7 @@
                 data.results.stats.forEach(stat => {
                     statsGrid.innerHTML += `
                         <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 text-center border border-white/20 hover:-translate-y-2 transition-transform">
-                            <div class="text-5xl font-bold mb-2">${stat.count}</div>
+                            <div class="text-5xl font-bold mb-2">+${(stat.count).toLocaleString("pt-BR")}</div>
                             <p class="text-lg font-medium opacity-90">${stat.title}</p>
                         </div>
                     `;
