@@ -38,38 +38,6 @@
             <p id="errorText"></p>
         </div>
     </div>
-
-    <script>
-        document.getElementById('loginForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const errorDiv = document.getElementById('errorMsg');
-            const errorText = document.getElementById('errorText');
-
-            try {
-                // Simulação de endpoint para evitar travar se o backend não estiver rodando ao testar o visual
-                // Remova ou ajuste conforme seu backend real
-                const res = await fetch('http://localhost:3000/api/auth/login', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email, password })
-                });
-
-                const data = await res.json();
-                if (res.ok) {
-                    localStorage.setItem('token', data.token);
-                    window.location.href = 'dashboard.html';
-                } else {
-                    errorText.innerText = data.msg || 'Erro ao fazer login';
-                    errorDiv.classList.remove('hidden');
-                }
-            } catch (err) {
-                console.error(err);
-                errorText.innerText = 'Erro de conexão com o servidor.';
-                errorDiv.classList.remove('hidden');
-            }
-        });
-    </script>
+    <script type="module" src="./js/login.js"></script>
 </body>
 </html>
