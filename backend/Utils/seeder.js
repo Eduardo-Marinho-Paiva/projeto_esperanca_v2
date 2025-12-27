@@ -1,16 +1,20 @@
+require('dotenv').config();
 const User = require('../models/User');
 const Management = require('../models/Management');
 const HomeContent = require('../models/HomeContent');
 const bcrypt = require('bcryptjs');
 
+
 const seedDatabase = async () => {
     // 1. Criar Admin Padrão se não existir
-    const adminExists = await User.findOne({ email: 'admin@projetoesperanca.com' });
+    const adminExists = await User.findOne({ email: process.env.ADMIN_EMAIL });
     if (!adminExists) {
+        const senha = process.env.ADMIN_PASSWORD;
+        const email = process.env.ADMIN_EMAIL;
         const salt = await bcrypt.genSalt(10);
-        const password = await bcrypt.hash('admin123', salt);
-        await User.create({ email: 'admin@projetoesperanca.com', password });
-        console.log('Admin padrão criado: admin@projetoesperanca.com / admin123');
+        const password = await bcrypt.hash(senha, salt);
+        await User.create({ email: email, password });
+        console.log(`Admin padrão criado: ${email} / ${senha}`);
     }
 
     // 2. Inicializar Home Content se não existir
