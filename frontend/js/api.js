@@ -1,5 +1,3 @@
-const API_BASE_URL = "http://localhost:3000/api/content";
-
 /**
  * Busca conteúdos de uma seção específica.
  * @param {string} section - A seção para buscar (home, projects, management, stories).
@@ -7,7 +5,7 @@ const API_BASE_URL = "http://localhost:3000/api/content";
  */
 async function fetchContent(section) {
     try {
-        const response = await fetch(`${API_BASE_URL}/${section}`);
+        const response = await fetch(`/api/content/${section}`);
         if (!response.ok) throw new Error("Erro na requisição");
         return await response.json();
     } catch (error) {

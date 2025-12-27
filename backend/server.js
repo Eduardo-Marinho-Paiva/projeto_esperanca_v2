@@ -4,6 +4,7 @@ const cors = require('cors');
 const path = require('path'); // Importar módulo path
 const connectDB = require('./config/db');
 const seedDatabase = require('./Utils/seeder');
+const instagramRouter = require('./routes/instagramRoutes').instagramRouter;
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(express.json());
 // --- ROTAS DA API ---
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/content', require('./routes/contentRoutes'));
+app.use('/api/instagram', instagramRouter);
 
 // --- SERVIR ARQUIVOS ESTÁTICOS (FRONTEND E ADMIN) ---
 

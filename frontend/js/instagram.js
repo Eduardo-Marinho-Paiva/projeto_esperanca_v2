@@ -1,153 +1,37 @@
+document.addEventListener('DOMContentLoaded', async () => {
+    const instaTrack = document.getElementById('insta-track');
 
-const carousel = document.getElementById("carousel");
-let currentIndex = 0;
-let posts = [];
-let autoplayInterval;
-const gap = 20;
+    if (!instaTrack) {
+        console.warn('Elemento #insta-track não encontrado. O script do Instagram não será executado.');
+        return;
+    }
 
-let itemsToShow = getItemsToShow();
-
-function getItemsToShow() {
-    return window.innerWidth < 768 ? 1.1 : 3; // 1.2 permite ver parte dos próximos
-}
-
-
-
-// ...existing code...
-async function loadInstagramPosts() {
     try {
-        // Substitua pelo endpoint real do backend
-        const response = await fetch("http://localhost:3000/api/instagram/posts");
-        posts = await response.json();
+        // Busca os posts dinâmicos do backend
+        // Ajuste a URL se o backend estiver em outra porta ou endereço em produção
+        const response = await fetch(`/api/instagram/posts`);
+        
+        if (!response.ok) throw new Error('Falha na requisição ao backend');
 
-        // O restante do código permanece igual
-        posts.forEach((post, index) => {
-            const postDiv = document.createElement("div");
-            postDiv.classList.add("instapost");
-            postDiv.style.flex = `0 0 calc(${100 / itemsToShow}% - ${(gap * (itemsToShow - 1)) / itemsToShow}px)`;
+        const posts = await response.json();
 
-            if (index === 0) postDiv.classList.add("active");
+        let htmlContent = '';
 
-            const anchor = document.createElement("a");
-            anchor.href = post.link;
-            anchor.target = "_blank";
-
-            const img = document.createElement("img");
-            img.src = post.img;
-
-            anchor.appendChild(img);
-            postDiv.appendChild(anchor);
-            carousel.appendChild(postDiv);
+        // Gera o HTML usando o template exato solicitado
+        posts.forEach(post => {
+            htmlContent += `
+                <a href="${post.link}" target="_blank" class="flex-shrink-0 w-72 h-96 bg-gray-200 rounded-2xl overflow-hidden shadow-md border border-gray-100 relative group cursor-pointer hover:scale-[1.02] transition-transform duration-300 snap-center block">
+                    <img src="${post.img}" alt="Instagram Post" class="w-full h-full object-cover">
+                    
+                </a>
+            `;
         });
 
-        startCarousel();
-    } catch (err) {
-        console.error("Erro ao Carregar os Posts do Instagram", err);
+        instaTrack.innerHTML = htmlContent;
+
+    } catch (error) {
+        console.error("Erro ao carregar Instagram:", error);
+        // Fallback opcional ou manter vazio
+        instaTrack.innerHTML = '<p class="text-gray-500 p-4">Não foi possível carregar o feed do Instagram.</p>';
     }
-}
-
-function startCarousel() {
-    const item = carousel.querySelector(".instapost");
-    const itemWidth = item.offsetWidth + 20; // 20 = gap
-    const maxIndex = posts.length - itemsToShow;
-
-    function goToIndex(index) {
-        currentIndex = Math.max(0, Math.min(index, maxIndex));
-        carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-    }
-
-    function startAutoplay() {
-        stopAutoplay(); // evita múltiplos intervals
-        autoplayInterval = setInterval(() => {
-            currentIndex = (currentIndex + 1) % (posts.length - itemsToShow + 1);
-            goToIndex(currentIndex);
-        }, 3000);
-    }
-
-    function stopAutoplay() {
-        clearInterval(autoplayInterval);
-    }
-
-    // Inicia autoplay ao carregar
-    startAutoplay();
-
-    // DRAG
-    let isDragging = false;
-    let startX = 0;
-    let currentTranslate = 0;
-    let prevTranslate = 0;
-    let animationID;
-
-    function onDragStart(e) {
-        stopAutoplay();
-        isDragging = true;
-        startX = getPositionX(e);
-        prevTranslate = currentTranslate;
-        animationID = requestAnimationFrame(animation);
-        carousel.classList.add("grabbing");
-    }
-
-    function onDrag(e) {
-        if (!isDragging) return;
-        const currentX = getPositionX(e);
-        const delta = currentX - startX;
-        currentTranslate = prevTranslate + delta;
-    }
-
-    function onDragEnd() {
-        cancelAnimationFrame(animationID);
-        isDragging = false;
-        carousel.classList.remove("grabbing");
-
-        const movedBy = currentTranslate - prevTranslate;
-
-        if (movedBy < -itemWidth / 4 && currentIndex < maxIndex) {
-            currentIndex++;
-        } else if (movedBy > itemWidth / 4 && currentIndex > 0) {
-            currentIndex--;
-        }
-
-        goToIndex(currentIndex);
-
-
-        startAutoplay(); // Retorna o autoplay imediatamente, pois o timer do autoplay é resetado para 3s
-    }
-
-    function animation() {
-        setSliderPosition();
-        if (isDragging) requestAnimationFrame(animation);
-    }
-
-    function setSliderPosition() {
-        carousel.style.transform = `translateX(${currentTranslate}px)`;
-    }
-
-    function getPositionX(e) {
-        return e.type.includes("mouse") ? e.pageX : e.touches[0].clientX;
-    }
-
-    // Eventos de mouse/touch
-    carousel.addEventListener("mousedown", onDragStart);
-    carousel.addEventListener("mousemove", onDrag);
-    carousel.addEventListener("mouseup", onDragEnd);
-    carousel.addEventListener("mouseleave", () => isDragging && onDragEnd());
-
-    carousel.addEventListener("touchstart", onDragStart);
-    carousel.addEventListener("touchmove", onDrag);
-    carousel.addEventListener("touchend", onDragEnd);
-}
-
-window.addEventListener("resize", () => {
-    const newItemsToShow = getItemsToShow();
-    if (newItemsToShow !== itemsToShow) {
-        itemsToShow = newItemsToShow;
-        carousel.innerHTML = "";
-        currentIndex = 0;
-        loadInstagramPosts(); // Recria com novo layout
-    }
-});
-
-
-window.addEventListener("DOMContentLoaded", () => {
-    loadInstagramPosts();
 });
