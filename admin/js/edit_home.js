@@ -1,5 +1,4 @@
-require('dotenv').config();
-const SERVER_URL = process.env.SERVER_URL || 'http://localhost:3000';
+ 
 
 
 
@@ -10,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         async function loadData() {
             try {
-                const res = await fetch(`${SERVER_URL}/api/content/home`);
+                const res = await fetch(`/api/content/home`);
                 const data = await res.json();
                 
                 document.getElementById('whoText').value = data.whoWeAre?.text || '';
@@ -85,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 partners: currentPartners
             };
 
-            await fetch(`${SERVER_URL}/api/content/home`, {
+            await fetch(`/api/content/home`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json', 'x-auth-token': token },
                 body: JSON.stringify(body)

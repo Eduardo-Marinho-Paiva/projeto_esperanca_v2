@@ -1,6 +1,3 @@
-require('dotenv').config();
-const SERVER_URL = process.env.SERVER_URL || 'http://localhost:3000';
-
 document.addEventListener('DOMContentLoaded', () => {
 async function loadManagement() {
             const res = await fetch(`/api/content/management`);
@@ -11,7 +8,7 @@ async function loadManagement() {
             members.forEach(m => {
                 container.innerHTML += `
                     <div class="bg-white p-4 rounded shadow flex items-center gap-4">
-                        <img src="${m.image || 'https://via.placeholder.com/100'}" class="w-16 h-16 rounded-full object-cover border">
+                        <img src="${m.image}" class="w-16 h-16 rounded-full object-cover border">
                         <div class="flex-1">
                             <p class="text-sm text-gray-500 font-bold uppercase">${m.role}</p>
                             <input type="text" id="name-${m._id}" value="${m.name}" class="border p-1 rounded w-full mt-1" placeholder="Nome">
