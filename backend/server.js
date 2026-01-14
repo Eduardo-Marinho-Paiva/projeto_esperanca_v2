@@ -5,6 +5,7 @@ const path = require('path'); // Importar módulo path
 const connectDB = require('./config/db');
 const seedDatabase = require('./Utils/seeder');
 const instagramRouter = require('./routes/instagramRoutes').instagramRouter;
+const backupRoutes = require('./routes/backupRoutes');
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.use(express.json());
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/content', require('./routes/contentRoutes'));
 app.use('/api/instagram', instagramRouter);
+app.use('/api/backup', backupRoutes);
 
 // --- SERVIR ARQUIVOS ESTÁTICOS (FRONTEND E ADMIN) ---
 
