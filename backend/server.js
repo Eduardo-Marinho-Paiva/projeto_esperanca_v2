@@ -43,28 +43,41 @@ app.get('/admin', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 
-const startApp = async () => {
-    try {
-        console.log("🔄 Iniciando aplicação...");
+// const startApp = async () => {
+//     try {
+//         console.log("🔄 Iniciando aplicação...");
         
-        // 1. Conectar ao Banco
-        await connectDB();
+//         // 1. Conectar ao Banco
+//         await connectDB();
 
-        // 2. Popular dados iniciais
-        console.log("🌱 Verificando dados iniciais (Seed)...");
-        await seedDatabase();
+//         // 2. Popular dados iniciais
+//         console.log("🌱 Verificando dados iniciais (Seed)...");
+//         await seedDatabase();
 
-        // 3. Iniciar servidor
-        app.listen(PORT, () => {
-            console.log(`🚀 Servidor rodando na porta ${PORT}`);
-            console.log(`🌍 Frontend disponível em: http://localhost:${PORT}`);
-            console.log(`⚙️  Admin disponível em:    http://localhost:${PORT}/admin/login.html`);
-        });
+//         // 3. Iniciar servidor
+//         app.listen(PORT, () => {
+//             console.log(`🚀 Servidor rodando na porta ${PORT}`);
+//             console.log(`🌍 Frontend disponível em: http://localhost:${PORT}`);
+//             console.log(`⚙️  Admin disponível em:    http://localhost:${PORT}/admin/login.html`);
+//         });
 
-    } catch (error) {
-        console.error("\n💀 Falha fatal na inicialização.");
-        console.error("Motivo:", error.message);
-    }
-};
+//     } catch (error) {
+//         console.error("\n💀 Falha fatal na inicialização.");
+//         console.error("Motivo:", error.message);
+//     }
+// };
 
-startApp();
+// startApp();
+
+
+connectDB(); 
+
+// Apenas inicie o servidor se NÃO estiver no Vercel (ambiente de desenvolvimento local)
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`🚀 Servidor rodando na porta ${PORT}`);
+    });
+}
+
+// O Vercel exige que você exporte o 'app'
+module.exports = app;
