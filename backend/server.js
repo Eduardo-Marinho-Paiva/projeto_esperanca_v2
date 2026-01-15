@@ -9,9 +9,12 @@ const backupRoutes = require('./routes/backupRoutes');
 
 const app = express();
 
-// Middlewares
+// --- MIDDLEWARES (ADAPTADO) ---
 app.use(cors());
-app.use(express.json());
+
+// Aumenta o limite do body-parser para aceitar imagens em Base64 (até 50mb)
+app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
 // --- ROTAS DA API ---
 app.use('/api/auth', require('./routes/authRoutes'));
@@ -22,11 +25,9 @@ app.use('/api/backup', backupRoutes);
 // --- SERVIR ARQUIVOS ESTÁTICOS (FRONTEND E ADMIN) ---
 
 // 1. Servir a pasta 'admin' na rota /admin
-// O __dirname aponta para a pasta 'backend', então voltamos uma pasta (..) e entramos em 'admin'
 app.use('/admin', express.static(path.join(__dirname, '../admin')));
 
 // 2. Servir a pasta 'frontend' na raiz (/)
-// Isso faz com que o style.css, imagens e js sejam encontrados
 app.use(express.static(path.join(__dirname, '../frontend')));
 
 // 3. Rota Coringa (Fallback)

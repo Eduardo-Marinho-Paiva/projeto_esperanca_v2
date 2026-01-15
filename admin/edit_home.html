@@ -8,7 +8,6 @@
     <script src="js/auth.js"></script>
 </head>
 <body class="bg-gray-50 min-h-screen pb-12">
-    <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-10">
         <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
             <div class="flex items-center gap-4">
@@ -27,7 +26,6 @@
     <div class="max-w-5xl mx-auto mt-8 px-6">
         <form id="homeForm" class="space-y-8">
             
-            <!-- Seção Quem Somos -->
             <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                 <div class="flex items-center gap-3 mb-6 border-b pb-4">
                     <div class="bg-orange-100 text-orange-600 w-10 h-10 rounded-full flex items-center justify-center font-bold">1</div>
@@ -40,13 +38,18 @@
                         <textarea id="whoText" class="w-full border border-gray-300 p-3 rounded-lg h-32 focus:ring-2 focus:ring-orange-500 focus:outline-none transition"></textarea>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">URL da Imagem Ilustrativa</label>
-                        <input type="text" id="whoImage" class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none transition">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Imagem Ilustrativa</label>
+                        <div class="flex gap-4 items-start">
+                            <div class="flex-1">
+                                <input type="file" id="whoImageInput" accept="image/*" class="w-full border border-gray-300 p-2 rounded-lg bg-gray-50 text-sm">
+                                <input type="hidden" id="whoImageBase64"> <p class="text-xs text-gray-500 mt-1">Formatos aceitos: JPG, PNG, WEBP.</p>
+                            </div>
+                            <img id="whoImagePreview" class="w-32 h-20 object-cover rounded border hidden bg-gray-100">
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Seção Vídeo -->
             <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                 <div class="flex items-center gap-3 mb-6 border-b pb-4">
                     <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center font-bold">2</div>
@@ -58,7 +61,6 @@
                 </div>
             </div>
 
-            <!-- Seção Resultados -->
             <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                 <div class="flex items-center gap-3 mb-6 border-b pb-4 justify-between">
                     <div class="flex items-center gap-3">
@@ -74,11 +76,9 @@
                 </div>
                 
                 <div id="statsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <!-- Stats dinâmicos -->
-                </div>
+                    </div>
             </div>
 
-            <!-- Seção Parceiros -->
             <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                 <div class="flex items-center gap-3 mb-6 border-b pb-4 justify-between">
                     <div class="flex items-center gap-3">
@@ -89,8 +89,7 @@
                 </div>
 
                 <div id="partnersContainer" class="space-y-3">
-                    <!-- Inputs de parceiros -->
-                </div>
+                    </div>
             </div>
 
         </form>
